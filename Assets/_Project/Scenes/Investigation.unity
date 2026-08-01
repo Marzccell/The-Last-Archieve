@@ -5163,6 +5163,143 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338112604}
   m_CullTransparentMesh: 1
+--- !u!1 &347251845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347251846}
+  - component: {fileID: 347251848}
+  - component: {fileID: 347251847}
+  m_Layer: 5
+  m_Name: LanguageLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &347251846
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347251845}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1374268925}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &347251847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347251845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: EN
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294769396
+  m_fontColor: {r: 0.95686275, g: 0.98039216, b: 0.9882353, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 22
+  m_fontSizeBase: 22
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &347251848
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347251845}
+  m_CullTransparentMesh: 1
 --- !u!1 &347503100
 GameObject:
   m_ObjectHideFlags: 0
@@ -6623,6 +6760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "STAFF OFFICE \u2014 C-07 DISPATCH AREA"
+  evidenceLocationIndonesian: "KANTOR STAF \u2014 AREA PENGIRIMAN C-07"
   document1:
     evidenceID: E13_C07_CRATE_WEIGHT_AUDIT
     tabName: CRATE WEIGHT AUDIT
@@ -6638,6 +6776,21 @@ MonoBehaviour:
       AREA\r\n\r\nEXPECTED MANIFEST WEIGHT: 8,240 g\r\nWEIGHT RECONCILIATION: PENDING\r\n\r\nSYSTEM
       NOTE:\r\nThe early-dispatch override moved full weight reconciliation\r\nto
       the destination lab.\r\nThe museum performs a seal check only before pickup."
+    tabNameIndonesian: AUDIT BERAT
+    evidenceTitleIndonesian: AUDIT BERAT PETI RESTORASI
+    evidenceTypeIndonesian: CATATAN TIMBANGAN
+    evidenceBodyIndonesian: "PETI RESTORASI KELUAR \u2014 AUDIT BERAT\r\n\r\nID PETI:
+      C-07\r\n\r\nSTATUS: PROSES PENGEMASAN\r\n\r\n\r\n19:20 BASELINE PETI YANG TELAH
+      DIKEMAS: 8.240 g\r\n      (peti dan seluruh isi yang terdaftar telah disertakan)\r\n\r\n19:34
+      PAKET DOKUMEN DITAMBAHKAN\r\n      (tidak dihitung oleh timbangan)\r\n\r\n19:46
+      BERAT PRA-SEGEL TERCATAT: 8.652 g\r\n\r\n\r\nPERINGATAN SISTEM:\r\nTerjadi
+      perubahan berat yang tidak terdaftar antara pengukuran baseline dan pengukuran
+      pra-segel.\r\nWaktu pasti terjadinya perubahan tidak tersedia.\r\n\r\n\r\n20:10
+      SEGEL PENGEMASAN DIPASANG\r\n\r\n08:05 PENAHANAN LOCKDOWN \u2014 PETI TETAP
+      BERADA DI AREA PENGIRIMAN\r\n\r\n\r\nBERAT MANIFEST YANG SEHARUSNYA: 8.240
+      g\r\n\r\nREKONSILIASI BERAT: TERTUNDA\r\n\r\n\r\nCATATAN SISTEM:\r\n\r\nOverride
+      pengiriman lebih awal memindahkan rekonsiliasi berat lengkap ke laboratorium
+      tujuan.\r\nMuseum hanya melakukan pemeriksaan segel sebelum peti diambil."
   document2:
     evidenceID: E14_DISPATCH_MANIFEST_SCHEDULE
     tabName: MANIFEST & SCHEDULE
@@ -6654,8 +6807,25 @@ MonoBehaviour:
       CONTENTS:\r\n\u2022 Two bronze restoration mounts\r\n\u2022 Conservation foam
       set\r\n\u2022 Humidity monitor\r\n\u2022 Documentation packet\r\n\r\nNO 412
       g GEMSTONE OR REPLICA IS LISTED."
+    tabNameIndonesian: MANIFEST PENGIRIMAN
+    evidenceTitleIndonesian: MANIFEST PENGIRIMAN & RIWAYAT JADWAL
+    evidenceTypeIndonesian: CATATAN PENGIRIMAN
+    evidenceBodyIndonesian: "MANIFEST PENGIRIMAN & RIWAYAT JADWAL\r\n\r\nPETI: C-07\r\n\r\nTUJUAN:
+      LABORATORIUM RESTORASI NASIONAL\r\n\r\n\r\nJADWAL KEBERANGKATAN AWAL: 09:30
+      / 15 AGUSTUS\r\n\r\n19:31 PERMINTAAN VENDOR DITERIMA: PENGAMBILAN LEBIH AWAL\r\n\r\n19:33
+      JADWAL KEBERANGKATAN DIUBAH: 09:30 \u2192 08:30\r\n        PENGGUNA: GRA-05\r\n       
+      PERSETUJUAN KEDUA: TIDAK ADA\r\n\r\n19:34 OVERRIDE PENGIRIMAN LEBIH AWAL DITERAPKAN\r\n       
+      PEMERIKSAAN MUSEUM: HANYA SEGEL\r\n        PEMERIKSAAN BERAT LENGKAP: LABORATORIUM
+      TUJUAN\r\n\r\n19:34 PENANGGUNG JAWAB PENGEMASAN:  CUR-02\r\n\r\n20:10 SEGEL
+      PENGEMASAN DIPASANG\r\n\r\n08:05 PENAHANAN LOCKDOWN DITERAPKAN\r\n\r\n08:30
+      STATUS PENGIRIMAN \u2014 DIBATALKAN KARENA LOCKDOWN\r\n\r\n\r\nISI YANG TERCANTUM
+      DALAM MANIFEST:\r\n\r\n\u2022 Dua dudukan restorasi perunggu\r\n\r\n\u2022
+      Satu set busa konservasi\r\n\r\n\u2022 Monitor kelembapan\r\n\r\n\u2022 Paket
+      dokumen\r\n\r\n\r\nTIDAK ADA BATU PERMATA ATAU REPLIKA SEBERAT 412 g YANG TERCANTUM."
   hotspotName: C-07 DISPATCH AREA
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: PETI PENGIRIMAN C-07
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1638809767}
   hotspotCountText: {fileID: 640281124}
   popupController: {fileID: 869402488}
@@ -17652,6 +17822,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362836129}
   m_CullTransparentMesh: 1
+--- !u!1 &1374268924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374268925}
+  - component: {fileID: 1374268928}
+  - component: {fileID: 1374268927}
+  - component: {fileID: 1374268926}
+  - component: {fileID: 1374268929}
+  m_Layer: 5
+  m_Name: LanguageToggleButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1374268925
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374268924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 347251846}
+  m_Father: {fileID: 1526620043}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 233, y: -27}
+  m_SizeDelta: {x: 80, y: 56}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1374268926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374268924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.078431375, g: 0.15686275, b: 0.19607843, a: 1}
+    m_HighlightedColor: {r: 0.105882354, g: 0.32156864, b: 0.39215687, a: 1}
+    m_PressedColor: {r: 0.0627451, g: 0.21960784, b: 0.27058825, a: 1}
+    m_SelectedColor: {r: 0.105882354, g: 0.32156864, b: 0.39215687, a: 1}
+    m_DisabledColor: {r: 0.20392157, g: 0.2627451, b: 0.2901961, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.08
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1374268927}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1374268927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374268924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1374268928
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374268924}
+  m_CullTransparentMesh: 1
+--- !u!114 &1374268929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374268924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d0e04f58223eb44abdb55a56eda657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanguageToggleButton
+  languageLabel: {fileID: 347251847}
 --- !u!1 &1380522348
 GameObject:
   m_ObjectHideFlags: 0
@@ -17860,6 +18165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "MAIN EXHIBITION HALL \u2014 DISPLAY SYSTEM PANEL"
+  evidenceLocationIndonesian: 'AULA PAMERAN UTAMA - PANEL SISTEM PAJANGAN '
   document1:
     evidenceID: E01_DISPLAY_ACCESS_WEIGHT_LOG
     tabName: ACCESS & WEIGHT LOG
@@ -17879,6 +18185,24 @@ MonoBehaviour:
       NOTE:\r\nThe holder records session credentials, weight, and an anonymous Fit
       Profile.\r\nFit Profile codes do not contain object names. Compare them with
       the Collection Registry."
+    tabNameIndonesian: LOG AKSES & BERAT
+    evidenceTitleIndonesian: LOG AKSES & BERAT PAJANGAN ROYAL SAPPHIRE
+    evidenceTypeIndonesian: LOG SISTEM
+    evidenceBodyIndonesian: "LOG AKSES & BERAT PAJANGAN ROYAL SAPPHIRE\r\nTANGGAL:
+      14 AGUSTUS\r\nPAJANGAN: AULA PAMERAN UTAMA / DUDUKAN DALAM RS-MOUNT-01\r\n\r\n19:39:52
+      MODE VERIFIKASI PRA-PEMELIHARAAN \u2014 AKTIF\n\r\n19:42:08 DUDUKAN DALAM DIBUKA\r\n      
+      SESI: CUR-02\n\r\n19:42:16 OBJEK DIANGKAT \u2014 412 g\r\n       PROFIL KECOCOKAN:
+      F-71\n\r\n19:42:23 OBJEK DILETAKKAN \u2014 412 g\r\n       PROFIL KECOCOKAN:
+      F-44\n\r\n19:42:31 DUDUKAN DALAM DITUTUP\r\n       PERUBAHAN BERAT BERSIH:
+      0 g\r\n\r\n20:02:04 PERINTAH KERJA MNT-204 \u2014 AKTIF\n\r\n20:04:37 SESI
+      KURATOR CUR-02 \u2014 MASIH AKTIF\n\r\n20:14:09 BYPASS SENSOR DIPERPANJANG
+      HINGGA 20:28\n\r\n20:20:11 DUDUKAN DALAM DIBUKA\r\n       SESI: CUR-02\n\r\n20:20:18
+      OBJEK DIANGKAT \u2014 412 g\r\n       PROFIL KECOCOKAN: F-44\n\r\n20:20:25
+      OBJEK DILETAKKAN \u2014 409 g\r\n       PROFIL KECOCOKAN: F-09\n\r\n20:20:32
+      DUDUKAN DALAM DITUTUP\n\r\n20:28:05 BASELINE PEMELIHARAAN DITERIMA \u2014 409
+      g\r\n\r\nCATATAN SISTEM:\r\nDudukan mencatat kredensial sesi, berat, dan Profil
+      Kecocokan anonim.\r\nKode Profil Kecocokan tidak memuat nama objek. Bandingkan
+      kode tersebut dengan Registri Koleksi."
   document2:
     evidenceID: E02_MORNING_AUTHENTICITY_REPORT
     tabName: AUTHENTICITY REPORT
@@ -17892,8 +18216,22 @@ MonoBehaviour:
       Registry entry TR-17.\r\n\r\nRESULT:\r\nAUTHENTICITY FAILURE\r\n\r\n08:05 MUSEUM
       LOCKDOWN INITIATED\r\n\r\nNOTE:\r\nThe authenticity scanner runs once per day
       at 08:00.\r\nIt does not identify object changes in real time."
+    tabNameIndonesian: LAPORAN KEASLIAN
+    evidenceTitleIndonesian: LAPORAN KEASLIAN PASCA-INSIDEN
+    evidenceTypeIndonesian: LAPORAN PEMINDAIAN
+    evidenceBodyIndonesian: "LAPORAN KEASLIAN PASCA-INSIDEN\r\nTANGGAL: 15 AGUSTUS\r\nWAKTU
+      PEMINDAIAN: 08:00\r\n\r\nOBJEK YANG SEHARUSNYA: RS-01 \u2014 ROYAL SAPPHIRE
+      ASLI\r\nOBJEK YANG TERDETEKSI: TR-17 \u2014 REPLIKA LATIHAN\r\nBERAT TERDETEKSI:
+      409 g\r\n\r\nPENANDA IDENTIFIKASI:\r\n\u2022 Ukiran mikro latihan terkonfirmasi
+      di bawah dudukan bagian bawah.\r\n\u2022 Pola pembiasan cahaya internal tidak
+      cocok dengan RS-01.\r\n\u2022 Kondisi objek cocok dengan entri Registri TR-17.\r\n\r\nHASIL:
+      GAGAL VERIFIKASI KEASLIAN\r\n08:05 LOCKDOWN MUSEUM DIMULAI\r\n\r\nCATATAN:\r\nPemindai
+      keaslian dijalankan sekali sehari pada pukul 08:00.\r\nSistem ini tidak mengidentifikasi
+      pergantian objek secara langsung."
   hotspotName: DISPLAY SYSTEM PANEL
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: PANEL SISTEM PAJANGAN
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1120475919}
   hotspotCountText: {fileID: 34800889}
   popupController: {fileID: 869402488}
@@ -20178,6 +20516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "STAFF OFFICE \u2014 MAINTENANCE TERMINAL"
+  evidenceLocationIndonesian: "KANTOR STAFF \u2014 TERMINAL PEMELIHARAAN"
   document1:
     evidenceID: E03_WORK_ORDER_REVISION_HISTORY
     tabName: WORK ORDER HISTORY
@@ -20198,6 +20537,25 @@ MonoBehaviour:
       BYPASS EXTENDED TO 20:28\r\n\r\n20:18:40 CAMERA DIAGNOSTIC REQUEST OPENED\r\n\r\nPROCEDURE
       NOTE:\r\nAny extension affecting security systems requires a second museum
       approval."
+    tabNameIndonesian: PERINTAH KERJA
+    evidenceTitleIndonesian: PERINTAH KERJA & RIWAYAT REVISI
+    evidenceTypeIndonesian: DOKUMEN PEMELIHARAAN
+    evidenceBodyIndonesian: "PERINTAH KERJA PEMELIHARAAN MNT-204\r\nAREA: PAJANGAN
+      ROYAL SAPPHIRE\r\nJADWAL PELAKSANAAN: 20:02\u201320:18\r\nTEKNISI: LUCAS /
+      MNT-04\r\nDUKUNGAN KURATOR: OLIVIA / CUR-02\r\nPENYETUJU: GRACE / GRA-05\r\n\r\nTUGAS
+      YANG DIIZINKAN:\r\n\u2022 Pemeriksaan bagian luar kotak pajangan\r\n\u2022
+      Kalibrasi sensor alarm menggunakan CW-412\r\n\u2022 Bypass sensor sementara
+      selama kalibrasi\r\n\u2022 Diagnostik kamera hanya jika kalibrasi gagal\r\n\r\nOTORISASI
+      PRA-PEMELIHARAAN\r\n19:39\u201319:50 VERIFIKASI DUDUKAN OLEH KURATOR\r\nKREDENSIAL
+      YANG DIIZINKAN: HANYA CUR-02\r\nTUJUAN: Pemeriksaan kecocokan replika dan posisi
+      dudukan\r\nAKSES DUDUKAN DALAM: DIIZINKAN SELAMA PERIODE INI\r\n\r\nRIWAYAT
+      REVISI\n\r\n20:11:42 PERCOBAAN KALIBRASI 1 \u2014 GAGAL\n\r\n20:13:47 PERMINTAAN
+      PERPANJANGAN BYPASS\r\n       PEMOHON: MNT-04\r\n       ALASAN: MELANJUTKAN
+      KALIBRASI\n\r\n20:14:02 PERIODE DIPERPANJANG HINGGA 20:28\r\n       DISETUJUI
+      OLEH GRA-05\r\n       PERSETUJUAN KEDUA: TIDAK ADA\n\r\n20:14:09 BYPASS SENSOR
+      DIPERPANJANG HINGGA 20:28\n\r\n20:18:40 PERMINTAAN DIAGNOSTIK KAMERA DIBUKA\r\n\r\nCATATAN
+      PROSEDUR:\r\nSetiap perpanjangan yang memengaruhi sistem keamanan memerlukan
+      persetujuan kedua dari pihak museum."
   document2:
     evidenceID: E04_CALIBRATION_TOOL_LEDGER
     tabName: TOOL LEDGER
@@ -20212,8 +20570,23 @@ MonoBehaviour:
       ITEMS:\r\n\u2022 Technician report says reference tool was returned \u201Cbefore
       20:18.\u201D\r\n\u2022 Physical return scan occurred at 20:27.\r\n\r\nCHAIN-OF-CUSTODY
       STATUS: COMPLETE"
+    tabNameIndonesian: LOG KALIBRASI
+    evidenceTitleIndonesian: LOG KALIBRASI & PERALATAN LUCAS
+    evidenceTypeIndonesian: CATATAN PERALATAN
+    evidenceBodyIndonesian: "LOG KALIBRASI & PERALATAN LUCAS\r\nPERINTAH KERJA: MNT-204\r\n\r\n19:55:10
+      CW-412 DIAMBIL\r\n       MASSA TERDAFTAR: 412 g\r\n       PENGGUNA: MNT-04\n\r\n20:02:30
+      KALIBRASI DIMULAI\n\r\n20:11:42 PERCOBAAN 1 GAGAL \u2014 PERGESERAN REFERENSI\n\r\n20:14:15
+      PERPANJANGAN BYPASS DIKONFIRMASI\n\r\n20:18:52 DIAGNOSTIK JARAK JAUH DIMULAI
+      \u2014 KANTOR KEAMANAN\n\r\n20:27:06 PEMINDAIAN PENGEMBALIAN CW-412\r\n      
+      TUJUAN: KOTAK PERALATAN M-04\n\r\n20:27:12 BERAT KOTAK M-04: +412 g DARI BASELINE
+      19:50\r\n\r\nMASALAH YANG BELUM SELESAI:\r\n\u2022 Laporan teknisi menyatakan
+      alat referensi dikembalikan \u201Csebelum 20:18.\u201D\r\n\u2022 Pemindaian
+      pengembalian fisik terjadi pada pukul 20:27.\r\n\r\nSTATUS RANTAI PENYIMPANAN:
+      LENGKAP"
   hotspotName: MAINTENANCE TERMINAL
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: TERMINAL PEMELIHARAAN
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 49906754}
   hotspotCountText: {fileID: 578318426}
   popupController: {fileID: 869402488}
@@ -20349,6 +20722,7 @@ RectTransform:
   - {fileID: 1277204335}
   - {fileID: 997786562}
   - {fileID: 1604845445}
+  - {fileID: 1374268925}
   m_Father: {fileID: 1075230223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -21743,6 +22117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "STAFF OFFICE \u2014 COLLECTION DATABASE"
+  evidenceLocationIndonesian: "KANTOR STAF \u2014 DATABASE KOLEKSI"
   document1:
     evidenceID: E11_REPLICA_CALIBRATION_REGISTRY
     tabName: OBJECT REGISTRY
@@ -21759,6 +22134,22 @@ MonoBehaviour:
       Location: Maintenance Calibration Rack\r\nPurpose: Sensor calibration\r\n\r\nREGISTRY
       WARNING:\r\nWeight alone must not be used to confirm object identity.\r\nFit
       Profile must be matched with a display event before identifying a swapped object."
+    tabNameIndonesian: REGISTRI KOLEKSI
+    evidenceTitleIndonesian: REGISTRI KOLEKSI & KALIBRASI
+    evidenceTypeIndonesian: DATABASE KOLEKSI
+    evidenceBodyIndonesian: "REGISTRI KOLEKSI & KALIBRASI\r\n\r\n\r\nRS-01 \u2014
+      ROYAL SAPPHIRE ASLI\r\n\r\nBerat Terdaftar: 412 g\r\n\r\nProfil Kecocokan:
+      F-71\r\n\r\nLokasi Normal: Pajangan Aula Pameran Utama\r\n\r\n\r\nER-12 \u2014
+      REPLIKA PAMERAN\r\n\r\nBerat Terdaftar: 412 g\r\n\r\nProfil Kecocokan: F-44\r\n\r\nLokasi
+      Normal: Lemari Replika C-02\r\n\r\nTujuan: Simulasi pajangan dan pengujian
+      dudukan\r\n\r\n\r\nTR-17 \u2014 REPLIKA LATIHAN\r\n\r\nBerat Terdaftar: 409
+      g\r\n\r\nProfil Kecocokan: F-09\r\n\r\nLokasi Normal: Rak Arsip A-17\r\n\r\nTujuan:
+      Latihan penanganan oleh staf\r\n\r\n\r\nCW-412 \u2014 BEBAN KALIBRASI\r\n\r\nBerat
+      Terdaftar: 412 g\r\n\r\nProfil Kecocokan: TIDAK TERDAFTAR \u2014 hanya alat
+      kalibrasi\r\n\r\nLokasi Normal: Rak Kalibrasi Pemeliharaan\r\n\r\nTujuan: Kalibrasi
+      sensor\r\n\r\n\r\nPERINGATAN REGISTRI:\r\n\r\nBerat saja tidak boleh digunakan
+      untuk memastikan identitas objek.\r\n\r\nProfil Kecocokan harus dicocokkan
+      dengan aktivitas pajangan sebelum objek yang ditukar dapat diidentifikasi."
   document2:
     evidenceID: E12_A17_C02_AUDIT
     tabName: SHELF & CABINET AUDIT
@@ -21768,13 +22159,28 @@ MonoBehaviour:
       409 g\r\n20:25 412 g\r\n08:06 412 g / shelf locked during museum lockdown\r\n\r\nSHELF
       NOTE:\r\nA-17 records periodic weight only. It does not identify objects.\r\n\r\n\r\nREPLICA
       CABINET C-02 \u2014 PHYSICAL AUDIT\r\n\r\n19:36:04 ER-12 CHECKED OUT \u2014
-      CUR-02\r\n19:36:06 SLOT C-02-ER12 LATCH OPENED\r\n19:36:21 SLOT LATCH CLOSED
-      \u2014 SLOT EMPTY\r\n\r\n19:52:18 DIGITAL RETURN ENTRY CREATED \u2014 CUR-02\r\n19:52:18
+      CUR-02\n\r\n19:36:06 SLOT C-02-ER12 LATCH OPENED\n\r\n19:36:21 SLOT LATCH CLOSED
+      \u2014 SLOT EMPTY\r\n\r\n19:52:18 DIGITAL RETURN ENTRY CREATED \u2014 CUR-02\n\r\n19:52:18
       PHYSICAL LATCH EVENT: NONE\r\n\r\n08:07:30 SLOT INSPECTION \u2014 EMPTY\r\n\r\nAUDIT
       RESULT:\r\nER-12 was checked out physically. The later return exists only as
       a database entry."
+    tabNameIndonesian: AUDIT RAK & LEMARI
+    evidenceTitleIndonesian: AUDIT RAK A-17 & LEMARI C-02
+    evidenceTypeIndonesian: CATATAN AUDIT
+    evidenceBodyIndonesian: "RAK ARSIP A-17 \u2014 REKAMAN BERAT\r\n\r\n19:00 409
+      g\r\n\r\n20:00 409 g\r\n\r\n20:25 412 g\r\n\r\n08:06 412 g / rak dikunci selama
+      lockdown museum\r\n\r\n\r\nCATATAN RAK:\r\n\r\nA-17 hanya mencatat berat secara
+      berkala.\r\n\r\nSistem ini tidak mengidentifikasi objek.\r\n\r\n\r\nLEMARI
+      REPLIKA C-02 \u2014 AUDIT FISIK\r\n\r\n19:36:04 ER-12 DIAMBIL \u2014 CUR-02\r\n\r\n19:36:06
+      PENGUNCI SLOT C-02-ER12 DIBUKA\r\n\r\n19:36:21 PENGUNCI SLOT DITUTUP \u2014
+      SLOT KOSONG\r\n\r\n19:52:18 ENTRI PENGEMBALIAN DIGITAL DIBUAT \u2014 CUR-02\r\n\r\n19:52:18
+      AKTIVITAS PENGUNCI FISIK: TIDAK ADA\r\n\r\n08:07:30 PEMERIKSAAN SLOT \u2014
+      KOSONG\r\n\r\n\r\nHASIL AUDIT:\r\n\r\nER-12 diambil secara fisik.\r\n\r\nCatatan
+      pengembalian setelahnya hanya ada sebagai entri dalam database."
   hotspotName: COLLECTION DATABASE
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: DATABASE KOLEKSI
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1200008577}
   hotspotCountText: {fileID: 1728332753}
   popupController: {fileID: 869402488}
@@ -26681,6 +27087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "SECURITY OFFICE \u2014 CCTV COMPUTER"
+  evidenceLocationIndonesian: "KANTOR KEAMANAN \u2014 KOMPUTER CCTV "
   document1:
     evidenceID: E05_CCTV_MOVEMENT_TIMELINE
     tabName: CCTV TIMELINE
@@ -26705,6 +27112,28 @@ MonoBehaviour:
       / CUR-02\r\n\r\nCAMERA NOTE:\r\n\r\nC-04 covers East Service Passage and the
       rear Hall approach.\r\n\r\nStaff Records Bay has one controlled entrance. No
       unlogged exit is available."
+    tabNameIndonesian: TIMELINE CCTV
+    evidenceTitleIndonesian: TIMELINE PERGERAKAN CCTV MUSEUM
+    evidenceTypeIndonesian: CATATAN CCTV
+    evidenceBodyIndonesian: "TIMELINE PERGERAKAN CCTV MUSEUM\r\nTANGGAL: 14 AGUSTUS\r\n\r\n19:32
+      GRACE \u2014 MEMASUKI RUANG ARSIP STAF\n\r\n19:36 OLIVIA \u2014 KORIDOR PENYIMPANAN
+      REPLIKA; membawa kotak koleksi standar\n\r\n19:40 OLIVIA \u2014 MEMASUKI AULA
+      PAMERAN UTAMA\n\r\n19:41 DANIEL \u2014 CHECKPOINT PINTU MASUK MUSEUM\n\r\n19:41\u201319:44
+      GRACE \u2014 KAMERA MEJA RUANG ARSIP; keberadaan terus-menerus\n\r\n19:44 DANIEL
+      \u2014 CHECKPOINT KELUAR PINTU MASUK MUSEUM\n\r\n19:45 OLIVIA \u2014 KANTOR
+      STAF / KORIDOR PENGIRIMAN\n\r\n19:49 DANIEL \u2014 LORONG SERVIS TIMUR; troli
+      peralatan darurat terlihat\n\r\n19:55 LUCAS \u2014 KELUAR DARI RUANG PEMELIHARAAN;
+      kotak peralatan terlihat\n\r\n20:02 OLIVIA + LUCAS \u2014 AULA PAMERAN UTAMA\n\r\n20:04
+      OLIVIA \u2014 KELUAR DARI AULA MENUJU RUANG ARSIP STAF\n\r\n20:05 OLIVIA \u2014
+      MEMASUKI RUANG ARSIP STAF / CUR-02\n\r\n20:12 OLIVIA \u2014 KAMERA MEJA RUANG
+      ARSIP\n\r\n20:21 OLIVIA \u2014 PEMINDAI DOKUMEN RUANG ARSIP / CUR-02\n\r\n20:18
+      LUCAS \u2014 KONSOL KAMERA KANTOR KEAMANAN\n\r\n20:18 ETHAN \u2014 KORIDOR
+      RUANG ARSIP\n\r\n20:19\u201320:24 KAMERA C-04 \u2014 TIDAK ADA VIDEO\n\r\n20:24
+      ETHAN \u2014 KORIDOR KEMBALI KE KANTOR STAF\n\r\n20:24 LUCAS \u2014 KANTOR
+      KEAMANAN\n\r\n20:29 OLIVIA \u2014 KELUAR DARI RUANG ARSIP STAF / CUR-02\r\n\r\nCATATAN
+      KAMERA:\n\r\nC-04 mencakup Lorong Servis Timur dan jalur belakang menuju Aula.\n\r\nRuang
+      Arsip Staf memiliki satu pintu masuk yang dikontrol. Tidak tersedia pintu keluar
+      tanpa pencatatan."
   document2:
     evidenceID: E06_CAMERA_HEALTH_REBOOT_LOG
     tabName: CAMERA REBOOT LOG
@@ -26718,8 +27147,21 @@ MonoBehaviour:
       TYPE: MANUAL\r\n\r\nAUTOMATIC RESTART TRIGGER: NONE\r\n\r\nPOLICY NOTE:\r\n\r\nManual
       camera reboot during open maintenance requires technician report and supervisor
       co-sign."
+    tabNameIndonesian: LOG REBOOT KAMERA
+    evidenceTitleIndonesian: LOG KONDISI & REBOOT KAMERA
+    evidenceTypeIndonesian: LOG SISTEM CCTV
+    evidenceBodyIndonesian: "LOG KONDISI & REBOOT KAMERA\r\n\r\nKAMERA: C-04 / LORONG
+      SERVIS TIMUR\r\n\r\n\r\n20:11:49 SINYAL KESALAHAN KALIBRASI DITERIMA\r\n\r\n20:18:40
+      PERMINTAAN DIAGNOSTIK DIBUKA \u2014 MNT-04\r\n\r\n20:19:02 REBOOT MANUAL DIMULAI\r\n\r\nTERMINAL:
+      SECURITY-CONSOLE-02\r\n\r\nKREDENSIAL: MNT-04\r\n\r\n20:19:08 ALIRAN VIDEO
+      OFFLINE\r\n\r\n20:23:44 ALIRAN VIDEO SEDANG DIPULIHKAN\r\n\r\n20:24:03 C-04
+      ONLINE\r\n\r\n\r\nJENIS REBOOT: MANUAL\r\n\r\nPEMICU RESTART OTOMATIS: TIDAK
+      ADA\r\n\r\n\r\nCATATAN KEBIJAKAN:\r\n\r\nReboot kamera secara manual saat pemeliharaan
+      berlangsung memerlukan laporan teknisi dan persetujuan supervisor."
   hotspotName: CCTV COMPUTER
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: KOMPUTER CCTV
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1470894375}
   hotspotCountText: {fileID: 888166045}
   popupController: {fileID: 869402488}
@@ -27793,6 +28235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "SECURITY OFFICE \u2014 SECURITY RECORDS CONSOLE"
+  evidenceLocationIndonesian: "KANTOR KEAMANAN \u2014 KONSOL CATATAN KEAMANAN"
   document1:
     evidenceID: E07_DOOR_PATROL_RECORDS
     tabName: DOOR & PATROL RECORDS
@@ -27807,6 +28250,20 @@ MonoBehaviour:
       \u2014 SEC-01\r\n20:03 WEST PUBLIC CORRIDOR \u2014 SEC-01\r\n20:17 SECURITY
       OFFICE RETURN \u2014 SEC-01\r\n\r\nINCIDENT NOTE:\r\nNo approved Hold-Open
       request is attached to the closing patrol."
+    tabNameIndonesian: PINTU & PATROLI
+    evidenceTitleIndonesian: CATATAN KONTROL PINTU & PATROLI
+    evidenceTypeIndonesian: CATATAN KEAMANAN
+    evidenceBodyIndonesian: "CATATAN KONTROL PINTU & PATROLI\r\n\r\nTANGGAL: 14 AGUSTUS\r\n\r\n\r\nLORONG
+      SERVIS TIMUR\r\n\r\n19:50:13 PINTU DIBUKA \u2014 SEC-01\r\n\r\n19:50:22 MODE
+      TAHAN-TERBUKA DIAKTIFKAN \u2014 SEC-01\r\n           JADWAL PENONAKTIFAN: 20:30\r\n\r\n20:30:00
+      MODE TAHAN-TERBUKA DINONAKTIFKAN\r\n\r\n\r\nCATATAN SISTEM:\r\n\r\nAktivitas
+      kartu akses individual tidak dibuat saat Mode Tahan-Terbuka aktif.\r\n\r\n\r\nCHECKPOINT
+      PATROLI DANIEL\r\n\r\n19:37 KANTOR KEAMANAN \u2014 SEC-01\r\n\r\n19:41 PINTU
+      MASUK MUSEUM \u2014 SEC-01\r\n\r\n19:44 KELUAR DARI PINTU MASUK MUSEUM \u2014
+      SEC-01\r\n\r\n19:48 KORIDOR STAF \u2014 SEC-01\r\n\r\n20:03 KORIDOR PUBLIK
+      BARAT \u2014 SEC-01\r\n\r\n20:17 KEMBALI KE KANTOR KEAMANAN \u2014 SEC-01\r\n\r\n\r\nCATATAN
+      INSIDEN:\r\n\r\nTidak ada permintaan Mode Tahan-Terbuka yang disetujui dan
+      dilampirkan pada patroli penutupan."
   document2:
     evidenceID: E08_INTERVIEW_ARCHIVE
     tabName: INTERVIEW ARCHIVE
@@ -27832,8 +28289,35 @@ MonoBehaviour:
       the procedure. His tools and movements should be investigated.\u201D\r\n\r\nINTERVIEW
       NOTE:\r\nStatements were collected separately. No suspect had access to another
       suspect\u2019s transcript."
+    tabNameIndonesian: ARSIP WAWANCARA
+    evidenceTitleIndonesian: 'ARSIP WAWANCARA '
+    evidenceTypeIndonesian: TRANSKRIP WAWANCARA
+    evidenceBodyIndonesian: "[DANIEL \u2014 PETUGAS KEAMANAN]\r\n\r\n\u201CSaya mengikuti
+      rute patroli yang telah disetujui dan tidak mengubah pengaturan pintu apa pun.
+      Lucas memindahkan peralatan melalui area servis. Jika Lorong Servis Timur dibiarkan
+      terbuka, dialah yang seharusnya kalian periksa.\u201D\r\n\r\n\r\n[OLIVIA \u2014
+      KURATOR]\r\n\r\n\u201CSaya menyelesaikan Pemeriksaan Replika Cadangan dan mengembalikan
+      ER-12 sebelum pukul 19:55. Ethan telah mencari informasi mengenai replika sebelum
+      insiden terjadi. Jika ada entri koleksi yang diubah atau benda yang dipindahkan
+      melalui Kantor Staf, tanyakan kepadanya.\u201D\r\n\r\n\r\n[ETHAN \u2014 STAF
+      ADMINISTRASI]\r\n\r\n\u201CSaya tetap berada di workstation sejak pukul 20:12
+      hingga setelah pukul 20:28. Log aktivitas seharusnya membuktikan bahwa saya
+      mengetik dan menyimpan laporan bulanan. Olivia bertanggung jawab atas replika
+      dan memiliki akses kurator ke dudukan dalam, bukan saya.\u201D\r\n\r\n\r\n[LUCAS
+      \u2014 TEKNISI]\r\n\r\n\u201CKamera melakukan restart secara otomatis setelah
+      terjadi kesalahan kalibrasi. Saya memang meminta tambahan waktu kalibrasi,
+      tetapi saya tidak mengesahkan perpanjangan sistem keamanan ataupun mengubah
+      pengaturan pintu lorong. Daniel mengendalikan sistem keamanan dan bertanggung
+      jawab atas patroli tersebut.\u201D\r\n\r\n\r\n[GRACE \u2014 DIREKTUR MUSEUM]\r\n\r\n\u201CLucas
+      meminta agar periode pemeliharaan diperpanjang setelah kalibrasinya gagal.
+      Sistem memproses perpanjangan tersebut untuk pekerjaannya; saya tidak mengesampingkan
+      prosedur secara pribadi. Peralatan dan pergerakannya seharusnya diperiksa.\u201D\r\n\r\n\r\nCATATAN
+      WAWANCARA:\r\n\r\nPernyataan dikumpulkan secara terpisah. Tidak ada tersangka
+      yang memiliki akses terhadap transkrip tersangka lainnya."
   hotspotName: SECURITY RECORDS CONSOLE
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: CATATAN KEAMANAN
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 479182968}
   hotspotCountText: {fileID: 1907005276}
   popupController: {fileID: 869402488}
@@ -29923,6 +30407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotspotController
   evidenceLocation: "STAFF OFFICE \u2014 ETHAN'S WORKSTATION"
+  evidenceLocationIndonesian: "KANTOR STAF \u2014 WORKSTATION ETHAN"
   document1:
     evidenceID: E09_WORKSTATION_ACTIVITY_LOG
     tabName: ACTIVITY LOG
@@ -29968,6 +30453,83 @@ MonoBehaviour:
       This
       log records workstation events. It does not classify whether an event was produced
       by physical input, a macro, or a scheduled task.'
+    tabNameIndonesian: LOG AKTIVITAS
+    evidenceTitleIndonesian: LOG AKTIVITAS WORKSTATION ETHAN
+    evidenceTypeIndonesian: LOG KOMPUTER
+    evidenceBodyIndonesian: 'LOG AKTIVITAS WORKSTATION ETHAN
+
+      
+
+      WORKSTATION:
+      ADMIN-DESK-03
+
+      
+
+      PENGGUNA TERDAFTAR: ETHAN / ADM-03
+
+      
+
+      
+
+      19:58
+      SESI PENGGUNA DIBUKA
+
+      
+
+      20:07 LAPORAN PENGUNJUNG BULANAN DIBUKA
+
+      
+
+      20:12
+      AUTOREPORTTASK DIJALANKAN
+
+      
+
+      20:13 BAGIAN 4 LAPORAN DIPERBARUI
+
+      
+
+      20:16
+      TABEL DATA DIPERBARUI
+
+      
+
+      20:20 AKTIVITAS KEYBOARD TERDETEKSI
+
+      
+
+      20:22
+      DOKUMEN DISIMPAN OTOMATIS
+
+      
+
+      20:25 INDEKS ARSIP DIPERBARUI
+
+      
+
+      20:28
+      PENYIMPANAN AKHIR SELESAI
+
+      
+
+      20:30 SESI PENGGUNA DIKUNCI
+
+      
+
+      
+
+      CATATAN
+      SISTEM:
+
+      
+
+      Log ini mencatat aktivitas workstation.
+
+      
+
+      Log
+      ini tidak menentukan apakah suatu aktivitas dihasilkan oleh input fisik, macro,
+      atau tugas terjadwal.'
   document2:
     evidenceID: E10_AUTOMATIC_TASK_HISTORY
     tabName: AUTOMATIC TASK HISTORY
@@ -29981,8 +30543,23 @@ MonoBehaviour:
       USER INTERRUPTION\r\nPHYSICAL KEYBOARD INPUT DETECTED 20:12\u201320:28: NONE\r\n\r\nRECENT
       SEARCHES BY ADM-03\r\n18:54 \u201CTR-17 training replica location\u201D\r\n18:57
       \u201CA-17 shelf access\u201D\r\n19:03 \u201Cdisplay maintenance tolerance\u201D"
+    tabNameIndonesian: TUGAS OTOMATIS
+    evidenceTitleIndonesian: RIWAYAT EKSEKUSI TUGAS OTOMATIS
+    evidenceTypeIndonesian: RIWAYAT SISTEM
+    evidenceBodyIndonesian: "RIWAYAT EKSEKUSI TUGAS OTOMATIS\r\n\r\nTUGAS: AUTOREPORTTASK\r\n\r\nPEMILIK:
+      ADM-03\r\n\r\nDIBUAT: 14 AGUSTUS, 19:12\r\n\r\n\r\nKONFIGURASI\r\n\r\n20:12
+      MULAI TUGAS\r\n\r\n20:13 MASUKKAN TEMPLATE BAGIAN 4\r\n\r\n20:16 PERBARUI TABEL
+      DATA PENGUNJUNG\r\n\r\n20:20 KIRIM AKTIVITAS TOMBOL AGAR SISTEM TETAP AKTIF\r\n\r\n20:22
+      SIMPAN DOKUMEN AKTIF\r\n\r\n20:25 BANGUN ULANG INDEKS ARSIP\r\n\r\n20:28 SIMPAN
+      DAN TUTUP\r\n\r\n\r\nHASIL EKSEKUSI: SELESAI TANPA GANGGUAN PENGGUNA\r\n\r\nINPUT
+      KEYBOARD FISIK TERDETEKSI PUKUL 20:12\u201320:28: TIDAK ADA\r\n\r\n\r\nPENCARIAN
+      TERBARU OLEH ADM-03\r\n\r\n18:54 \u201Clokasi replika latihan TR-17\u201D\r\n\r\n18:57
+      \u201Cakses rak A-17\u201D\r\n\r\n19:03 \u201Cbatas toleransi pemeliharaan
+      pajangan\u201D"
   hotspotName: ETHAN'S WORKSTATION
   hotspotContentSummary: 2 DOCUMENTS
+  hotspotNameIndonesian: WORKSTATION ETHAN
+  hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1734650815}
   hotspotCountText: {fileID: 1887051528}
   popupController: {fileID: 869402488}

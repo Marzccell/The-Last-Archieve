@@ -20,16 +20,19 @@ public class EvidencePopupController : MonoBehaviour
 
     [Header("Tab Appearance")]
     [SerializeField]
-    private Color activeTabColor = new Color32(25, 102, 125, 255);
+    private Color activeTabColor =
+        new Color32(25, 102, 125, 255);
 
     [SerializeField]
-    private Color inactiveTabColor = new Color32(18, 31, 40, 255);
+    private Color inactiveTabColor =
+        new Color32(18, 31, 40, 255);
 
     [SerializeField]
     private Color activeTextColor = Color.white;
 
     [SerializeField]
-    private Color inactiveTextColor = new Color32(160, 178, 185, 255);
+    private Color inactiveTextColor =
+        new Color32(160, 178, 185, 255);
 
     [Header("Popup Controls")]
     [SerializeField] private ScrollRect bodyScrollRect;
@@ -41,7 +44,9 @@ public class EvidencePopupController : MonoBehaviour
     private EvidenceDocumentData document1;
     private EvidenceDocumentData document2;
 
-    private string currentLocation = string.Empty;
+    private string currentLocationEnglish = string.Empty;
+    private string currentLocationIndonesian = string.Empty;
+
     private int activeDocumentIndex;
 
     private void Awake()
@@ -49,9 +54,27 @@ public class EvidencePopupController : MonoBehaviour
         AddButtonListeners();
     }
 
+    private void OnEnable()
+    {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged +=
+                HandleLanguageChanged;
+        }
+    }
+
     private void Start()
     {
         CloseEvidence();
+    }
+
+    private void OnDisable()
+    {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged -=
+                HandleLanguageChanged;
+        }
     }
 
     private void OnDestroy()
@@ -60,7 +83,8 @@ public class EvidencePopupController : MonoBehaviour
     }
 
     public void OpenEvidence(
-        string location,
+        string locationEnglish,
+        string locationIndonesian,
         EvidenceDocumentData firstDocument,
         EvidenceDocumentData secondDocument
     )
@@ -85,7 +109,12 @@ public class EvidencePopupController : MonoBehaviour
             return;
         }
 
-        currentLocation = location ?? string.Empty;
+        currentLocationEnglish =
+            locationEnglish ?? string.Empty;
+
+        currentLocationIndonesian =
+            locationIndonesian ?? string.Empty;
+
         document1 = firstDocument;
         document2 = secondDocument;
 
@@ -147,6 +176,26 @@ public class EvidencePopupController : MonoBehaviour
         ShowDocument(1);
     }
 
+    private void HandleLanguageChanged(GameLanguage language)
+    {
+        if (document1 == null || document2 == null)
+        {
+            return;
+        }
+
+        EvidenceDocumentData selectedDocument =
+            GetDocument(activeDocumentIndex);
+
+        if (selectedDocument == null)
+        {
+            return;
+        }
+
+        UpdateDocumentContent(selectedDocument);
+        UpdateTabAppearance();
+        ResetScrollToTop();
+    }
+
     private void ShowDocument(int documentIndex)
     {
         EvidenceDocumentData selectedDocument =
@@ -155,8 +204,8 @@ public class EvidencePopupController : MonoBehaviour
         if (selectedDocument == null)
         {
             Debug.LogError(
-                $"EvidencePopupController: Document {documentIndex + 1} " +
-                "tidak tersedia.",
+                $"EvidencePopupController: Document " +
+                $"{documentIndex + 1} tidak tersedia.",
                 this
             );
 
@@ -180,17 +229,25 @@ public class EvidencePopupController : MonoBehaviour
         EvidenceDocumentData selectedDocument
     )
     {
+        GameLanguage language = GetCurrentLanguage();
+
         if (evidenceTitleText != null)
         {
             evidenceTitleText.text =
-                ToUpperSafe(selectedDocument.evidenceTitle);
+                ToUpperSafe(
+                    selectedDocument.GetTitle(language)
+                );
         }
 
         if (evidenceMetaText != null)
         {
-            string location = ToUpperSafe(currentLocation);
-            string evidenceType =
-                ToUpperSafe(selectedDocument.evidenceType);
+            string location = ToUpperSafe(
+                GetCurrentLocation(language)
+            );
+
+            string evidenceType = ToUpperSafe(
+                selectedDocument.GetType(language)
+            );
 
             evidenceMetaText.text =
                 $"{location}  •  {evidenceType}";
@@ -199,7 +256,8 @@ public class EvidencePopupController : MonoBehaviour
         if (evidenceBodyText != null)
         {
             evidenceBodyText.text =
-                selectedDocument.evidenceBody ?? string.Empty;
+                selectedDocument.GetBody(language)
+                ?? string.Empty;
         }
     }
 
@@ -212,7 +270,8 @@ public class EvidencePopupController : MonoBehaviour
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(selectedDocument.evidenceID))
+        if (string.IsNullOrWhiteSpace(
+            selectedDocument.evidenceID))
         {
             Debug.LogWarning(
                 "EvidencePopupController: Evidence ID masih kosong.",
@@ -234,6 +293,7 @@ public class EvidencePopupController : MonoBehaviour
             tab1Text,
             document1,
             "DOCUMENT 1",
+            "DOKUMEN 1",
             activeDocumentIndex == 0
         );
 
@@ -242,6 +302,7 @@ public class EvidencePopupController : MonoBehaviour
             tab2Text,
             document2,
             "DOCUMENT 2",
+            "DOKUMEN 2",
             activeDocumentIndex == 1
         );
     }
@@ -250,22 +311,37 @@ public class EvidencePopupController : MonoBehaviour
         Button tabButton,
         TMP_Text tabText,
         EvidenceDocumentData document,
-        string fallbackName,
+        string englishFallback,
+        string indonesianFallback,
         bool isActive
     )
     {
         if (tabText != null)
         {
+            GameLanguage language = GetCurrentLanguage();
+
+            string fallbackName =
+                language == GameLanguage.Indonesian
+                    ? indonesianFallback
+                    : englishFallback;
+
             string tabName = GetTabName(
                 document,
-                fallbackName
+                fallbackName,
+                language
             );
 
-            bool hasBeenRead = HasDocumentBeenRead(document);
+            bool hasBeenRead =
+                HasDocumentBeenRead(document);
+
+            string unreadText =
+                language == GameLanguage.Indonesian
+                    ? "BELUM DIBACA"
+                    : "UNREAD";
 
             tabText.text = hasBeenRead
                 ? tabName
-                : $"{tabName}\nUNREAD";
+                : $"{tabName}\n{unreadText}";
         }
 
         ApplyTabStyle(tabButton, tabText, isActive);
@@ -289,16 +365,44 @@ public class EvidencePopupController : MonoBehaviour
 
     private string GetTabName(
         EvidenceDocumentData document,
-        string fallbackName
+        string fallbackName,
+        GameLanguage language
     )
     {
-        if (document == null ||
-            string.IsNullOrWhiteSpace(document.tabName))
+        if (document == null)
         {
             return fallbackName;
         }
 
-        return document.tabName.Trim().ToUpperInvariant();
+        string tabName = document.GetTabName(language);
+
+        return string.IsNullOrWhiteSpace(tabName)
+            ? fallbackName
+            : tabName.Trim().ToUpperInvariant();
+    }
+
+    private string GetCurrentLocation(
+        GameLanguage language
+    )
+    {
+        if (language == GameLanguage.Indonesian &&
+            !string.IsNullOrWhiteSpace(
+                currentLocationIndonesian))
+        {
+            return currentLocationIndonesian;
+        }
+
+        return currentLocationEnglish;
+    }
+
+    private GameLanguage GetCurrentLanguage()
+    {
+        if (LanguageManager.Instance == null)
+        {
+            return GameLanguage.English;
+        }
+
+        return LanguageManager.Instance.CurrentLanguage;
     }
 
     private void ApplyTabStyle(
@@ -307,7 +411,8 @@ public class EvidencePopupController : MonoBehaviour
         bool isActive
     )
     {
-        if (tabButton != null && tabButton.image != null)
+        if (tabButton != null &&
+            tabButton.image != null)
         {
             tabButton.image.color = isActive
                 ? activeTabColor

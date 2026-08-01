@@ -8,31 +8,96 @@ public class EvidenceDocumentData
     [Header("Document Identity")]
     public string evidenceID;
 
-    [Header("Document Content")]
+    [Header("English Content")]
     public string tabName;
     public string evidenceTitle;
     public string evidenceType;
 
     [TextArea(10, 30)]
     public string evidenceBody;
+
+    [Header("Indonesian Content")]
+    public string tabNameIndonesian;
+    public string evidenceTitleIndonesian;
+    public string evidenceTypeIndonesian;
+
+    [TextArea(10, 30)]
+    public string evidenceBodyIndonesian;
+
+    public string GetTabName(GameLanguage language)
+    {
+        if (language == GameLanguage.Indonesian &&
+            !string.IsNullOrWhiteSpace(tabNameIndonesian))
+        {
+            return tabNameIndonesian;
+        }
+
+        return tabName;
+    }
+
+    public string GetTitle(GameLanguage language)
+    {
+        if (language == GameLanguage.Indonesian &&
+            !string.IsNullOrWhiteSpace(evidenceTitleIndonesian))
+        {
+            return evidenceTitleIndonesian;
+        }
+
+        return evidenceTitle;
+    }
+
+    public string GetType(GameLanguage language)
+    {
+        if (language == GameLanguage.Indonesian &&
+            !string.IsNullOrWhiteSpace(evidenceTypeIndonesian))
+        {
+            return evidenceTypeIndonesian;
+        }
+
+        return evidenceType;
+    }
+
+    public string GetBody(GameLanguage language)
+    {
+        if (language == GameLanguage.Indonesian &&
+            !string.IsNullOrWhiteSpace(evidenceBodyIndonesian))
+        {
+            return evidenceBodyIndonesian;
+        }
+
+        return evidenceBody;
+    }
 }
 
 [RequireComponent(typeof(Button))]
 public class HotspotController : MonoBehaviour
 {
-    [Header("Hotspot Evidence")]
+    [Header("Evidence Location")]
     [SerializeField] private string evidenceLocation;
 
-    [SerializeField] private EvidenceDocumentData document1 =
+    [SerializeField]
+    private string evidenceLocationIndonesian;
+
+    [Header("Evidence Documents")]
+    [SerializeField]
+    private EvidenceDocumentData document1 =
         new EvidenceDocumentData();
 
-    [SerializeField] private EvidenceDocumentData document2 =
+    [SerializeField]
+    private EvidenceDocumentData document2 =
         new EvidenceDocumentData();
 
-    [Header("Hotspot Label")]
+    [Header("Hotspot Label - English")]
     [SerializeField] private string hotspotName;
     [SerializeField] private string hotspotContentSummary;
 
+    [Header("Hotspot Label - Indonesian")]
+    [SerializeField] private string hotspotNameIndonesian;
+
+    [SerializeField]
+    private string hotspotContentSummaryIndonesian;
+
+    [Header("Hotspot Label References")]
     [SerializeField] private TMP_Text hotspotNameText;
     [SerializeField] private TMP_Text hotspotCountText;
 
@@ -53,6 +118,26 @@ public class HotspotController : MonoBehaviour
         UpdateHotspotLabel();
     }
 
+    private void OnEnable()
+    {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged +=
+                HandleLanguageChanged;
+        }
+
+        UpdateHotspotLabel();
+    }
+
+    private void OnDisable()
+    {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged -=
+                HandleLanguageChanged;
+        }
+    }
+
     private void OnDestroy()
     {
         if (hotspotButton != null)
@@ -68,6 +153,11 @@ public class HotspotController : MonoBehaviour
         UpdateHotspotLabel();
     }
 
+    private void HandleLanguageChanged(GameLanguage language)
+    {
+        UpdateHotspotLabel();
+    }
+
     private void HandleHotspotClicked()
     {
         if (!ValidateHotspot())
@@ -77,6 +167,7 @@ public class HotspotController : MonoBehaviour
 
         popupController.OpenEvidence(
             evidenceLocation,
+            evidenceLocationIndonesian,
             document1,
             document2
         );
@@ -84,16 +175,56 @@ public class HotspotController : MonoBehaviour
 
     private void UpdateHotspotLabel()
     {
+        GameLanguage language = GetCurrentLanguage();
+
         if (hotspotNameText != null)
         {
-            hotspotNameText.text = hotspotName;
+            hotspotNameText.text =
+                GetLocalizedText(
+                    hotspotName,
+                    hotspotNameIndonesian,
+                    language
+                );
         }
 
         if (hotspotCountText != null)
         {
+            string summary = GetLocalizedText(
+                hotspotContentSummary,
+                hotspotContentSummaryIndonesian,
+                language
+            );
+
             hotspotCountText.text =
-                hotspotContentSummary.ToUpper();
+                string.IsNullOrWhiteSpace(summary)
+                    ? string.Empty
+                    : summary.ToUpperInvariant();
         }
+    }
+
+    private GameLanguage GetCurrentLanguage()
+    {
+        if (LanguageManager.Instance == null)
+        {
+            return GameLanguage.English;
+        }
+
+        return LanguageManager.Instance.CurrentLanguage;
+    }
+
+    private string GetLocalizedText(
+        string englishText,
+        string indonesianText,
+        GameLanguage language
+    )
+    {
+        if (language == GameLanguage.Indonesian &&
+            !string.IsNullOrWhiteSpace(indonesianText))
+        {
+            return indonesianText;
+        }
+
+        return englishText ?? string.Empty;
     }
 
     private bool ValidateHotspot()
