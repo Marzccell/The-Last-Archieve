@@ -15,9 +15,27 @@ public class BriefingController : MonoBehaviour
 
     private int currentPage;
 
+    private void OnEnable()
+    {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged +=
+                HandleLanguageChanged;
+        }
+    }
+
     private void Start()
     {
         ShowPage(0);
+    }
+
+    private void OnDisable()
+    {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged -=
+                HandleLanguageChanged;
+        }
     }
 
     public void NextPage()
@@ -51,12 +69,38 @@ public class BriefingController : MonoBehaviour
 
         backButton.gameObject.SetActive(currentPage > 0);
 
-        bool isLastPage = currentPage == pages.Length - 1;
+        progressText.text =
+            $"{currentPage + 1} / {pages.Length}";
 
-        nextButtonText.text = isLastPage
-            ? "START INVESTIGATION"
-            : "NEXT";
+        UpdateNextButtonText();
+    }
 
-        progressText.text = $"{currentPage + 1} / {pages.Length}";
+    private void HandleLanguageChanged(GameLanguage language)
+    {
+        UpdateNextButtonText();
+    }
+
+    private void UpdateNextButtonText()
+    {
+        bool isIndonesian =
+            LanguageManager.Instance != null &&
+            LanguageManager.Instance.CurrentLanguage ==
+            GameLanguage.Indonesian;
+
+        bool isLastPage =
+            currentPage == pages.Length - 1;
+
+        if (isLastPage)
+        {
+            nextButtonText.text = isIndonesian
+                ? "MULAI INVESTIGASI"
+                : "START INVESTIGATION";
+        }
+        else
+        {
+            nextButtonText.text = isIndonesian
+                ? "LANJUT"
+                : "NEXT";
+        }
     }
 }

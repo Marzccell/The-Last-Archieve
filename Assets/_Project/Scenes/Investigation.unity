@@ -1250,6 +1250,7 @@ GameObject:
   - component: {fileID: 102916938}
   - component: {fileID: 102916940}
   - component: {fileID: 102916939}
+  - component: {fileID: 102916941}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -1376,6 +1377,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102916937}
   m_CullTransparentMesh: 1
+--- !u!114 &102916941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102916937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CASE BRIEF
+  indonesianText: BRIEF KASUS
 --- !u!1 &103055036
 GameObject:
   m_ObjectHideFlags: 0
@@ -9283,6 +9298,7 @@ GameObject:
   - component: {fileID: 685344784}
   - component: {fileID: 685344786}
   - component: {fileID: 685344785}
+  - component: {fileID: 685344787}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9409,6 +9425,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685344783}
   m_CullTransparentMesh: 1
+--- !u!114 &685344787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685344783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Case Brief
+  indonesianText: Brief Kasus
 --- !u!1 &688919574
 GameObject:
   m_ObjectHideFlags: 0
@@ -11613,6 +11643,7 @@ GameObject:
   - component: {fileID: 894714829}
   - component: {fileID: 894714831}
   - component: {fileID: 894714830}
+  - component: {fileID: 894714832}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11741,6 +11772,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894714828}
   m_CullTransparentMesh: 1
+--- !u!114 &894714832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894714828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Character File
+  indonesianText: File Karakter
 --- !u!1 &897391792
 GameObject:
   m_ObjectHideFlags: 0
@@ -16906,6 +16951,7 @@ GameObject:
   - component: {fileID: 1296337881}
   - component: {fileID: 1296337883}
   - component: {fileID: 1296337882}
+  - component: {fileID: 1296337884}
   m_Layer: 5
   m_Name: CaseBriefText
   m_TagString: Untagged
@@ -17057,6 +17103,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296337880}
   m_CullTransparentMesh: 1
+--- !u!114 &1296337884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296337880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: "<color=#E7C77A><b>CASE 07 \u2014 THE ROYAL SAPPHIRE</b></color>\n<color=#8FA9BE>STATUS:
+    ACTIVE INVESTIGATION</color>\n\nThe Royal Sapphire, registry code RS-01, has
+    disappeared from its secured display inside the National History Museum.\n\nThe
+    display system recorded no forced entry or physical damage. During the closing
+    period, several authorized maintenance, security, collection, and dispatch activities
+    occurred within the same time window. The available records contain contradictions,
+    incomplete actions, and entries that may not match what physically happened.\n\n\n<color=#E7C77A><b>PRIMARY
+    OBJECTIVE</b></color>\n\nDetermine:\n\n1. WHO removed the original Royal Sapphire.\n2.
+    WHERE the original Royal Sapphire is currently hidden.\n\nSubmit both conclusions
+    through the Detective Board before the investigation timer expires.\n\n\n<color=#E7C77A><b>KNOWN
+    CONDITIONS</b></color>\n\n\u2022 The museum closed to the public at 20:00.\n\u2022
+    The display shows no evidence of forced entry.\n\u2022 Multiple staff credentials
+    were used during the incident window.\n\u2022 Maintenance, security, replica
+    handling, and dispatch operations overlapped.\n\u2022 Several registered objects
+    have similar or identical weights.\n\u2022 A digital record does not always confirm
+    that a physical action occurred.\n\n\n<color=#E7C77A><b>POSSIBLE HIDING LOCATIONS</b></color>\n\n\u2022
+    Archive Shelf A-17\n\u2022 Replica Cabinet C-02\n\u2022 Technician Tool Case
+    M-04\n\u2022 Outgoing Restoration Crate C-07\n\n\n<color=#E7C77A><b>INVESTIGATION
+    PROTOCOL</b></color>\n\n\u2022 Examine all available evidence documents.\n\u2022
+    Compare timestamps, credential IDs, physical access, and system authority.\n\u2022
+    Separate confirmed physical events from database entries and automated logs.\n\u2022
+    Do not identify an object using weight alone.\n\u2022 Character access indicates
+    opportunity, not guilt.\n\u2022 Suspect statements may contain omissions, accusations,
+    or misleading claims.\n\u2022 The team receives only one final submission.\n\n<color=#8FA9BE>Cross-reference
+    the evidence. No single document reveals the complete sequence.</color>"
+  indonesianText: "<color=#E7C77A><b>KASUS 07 \u2014 ROYAL SAPPHIRE</b></color>\r\n<color=#8FA9BE>STATUS:
+    INVESTIGASI AKTIF</color>\r\n\r\nRoyal Sapphire, dengan kode registrasi RS-01,
+    telah menghilang dari etalase amannya di Museum Sejarah Nasional.\r\n\r\nSistem
+    etalase tidak mencatat adanya pembobolan atau kerusakan fisik. Selama periode
+    penutupan, beberapa kegiatan pemeliharaan, keamanan, koleksi, dan pengiriman
+    resmi berlangsung dalam rentang waktu yang sama. Catatan yang tersedia mengandung
+    pertentangan, tindakan yang tidak lengkap, dan entri yang mungkin tidak sesuai
+    dengan kejadian sebenarnya.\r\n\r\n\r\n<color=#E7C77A><b>TUJUAN UTAMA</b></color>\r\n\r\nTentukan:\r\n\r\n1.
+    SIAPA yang mengambil Royal Sapphire asli.\r\n2. DI MANA Royal Sapphire asli saat
+    ini disembunyikan.\r\n\r\nKirim kedua kesimpulan melalui Papan Detektif sebelum
+    waktu investigasi habis.\r\n\r\n\r\n<color=#E7C77A><b>KONDISI YANG DIKETAHUI</b></color>\r\n\r\n\u2022
+    Museum ditutup untuk umum pada pukul 20.00.\r\n\u2022 Etalase tidak menunjukkan
+    tanda-tanda pembobolan.\r\n\u2022 Beberapa kredensial staf digunakan selama rentang
+    waktu kejadian.\r\n\u2022 Kegiatan pemeliharaan, keamanan, penanganan replika,
+    dan pengiriman berlangsung dalam waktu yang berdekatan.\r\n\u2022 Beberapa objek
+    yang terdaftar memiliki berat yang mirip atau sama.\r\n\u2022 Catatan digital
+    tidak selalu memastikan bahwa suatu tindakan fisik benar-benar terjadi.\r\n\r\n\r\n<color=#E7C77A><b>KEMUNGKINAN
+    LOKASI PERSEMBUNYIAN</b></color>\r\n\r\n\u2022 Rak Arsip A-17\r\n\u2022 Lemari
+    Replika C-02\r\n\u2022 Kotak Peralatan Teknisi M-04\r\n\u2022 Peti Restorasi
+    Keluar C-07\r\n\r\n\r\n<color=#E7C77A><b>PROTOKOL INVESTIGASI</b></color>\r\n\r\n\u2022
+    Periksa seluruh dokumen bukti yang tersedia.\r\n\u2022 Bandingkan waktu, ID kredensial,
+    akses fisik, dan wewenang sistem.\r\n\u2022 Pisahkan kejadian fisik yang terkonfirmasi
+    dari entri basis data dan log otomatis.\r\n\u2022 Jangan mengidentifikasi objek
+    hanya berdasarkan beratnya.\r\n\u2022 Akses karakter menunjukkan kesempatan,
+    bukan kesalahan.\r\n\u2022 Pernyataan tersangka dapat mengandung penghilangan
+    informasi, tuduhan, atau klaim yang menyesatkan.\r\n\u2022 Tim hanya memiliki
+    satu kesempatan untuk mengirim jawaban akhir.\r\n\r\n<color=#8FA9BE>Hubungkan
+    seluruh bukti. Tidak ada satu dokumen pun yang mengungkap rangkaian kejadian
+    secara lengkap.</color>"
 --- !u!1 &1315714694
 GameObject:
   m_ObjectHideFlags: 0
@@ -28054,6 +28166,7 @@ GameObject:
   - component: {fileID: 2003374848}
   - component: {fileID: 2003374850}
   - component: {fileID: 2003374849}
+  - component: {fileID: 2003374851}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -28180,6 +28293,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003374847}
   m_CullTransparentMesh: 1
+--- !u!114 &2003374851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003374847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Detective Board
+  indonesianText: Papan Detektif
 --- !u!1 &2006140142
 GameObject:
   m_ObjectHideFlags: 0
@@ -30458,78 +30585,78 @@ MonoBehaviour:
     evidenceTypeIndonesian: LOG KOMPUTER
     evidenceBodyIndonesian: 'LOG AKTIVITAS WORKSTATION ETHAN
 
-      
+
 
       WORKSTATION:
       ADMIN-DESK-03
 
-      
+
 
       PENGGUNA TERDAFTAR: ETHAN / ADM-03
 
-      
 
-      
+
+
 
       19:58
       SESI PENGGUNA DIBUKA
 
-      
+
 
       20:07 LAPORAN PENGUNJUNG BULANAN DIBUKA
 
-      
+
 
       20:12
       AUTOREPORTTASK DIJALANKAN
 
-      
+
 
       20:13 BAGIAN 4 LAPORAN DIPERBARUI
 
-      
+
 
       20:16
       TABEL DATA DIPERBARUI
 
-      
+
 
       20:20 AKTIVITAS KEYBOARD TERDETEKSI
 
-      
+
 
       20:22
       DOKUMEN DISIMPAN OTOMATIS
 
-      
+
 
       20:25 INDEKS ARSIP DIPERBARUI
 
-      
+
 
       20:28
       PENYIMPANAN AKHIR SELESAI
 
-      
+
 
       20:30 SESI PENGGUNA DIKUNCI
 
-      
 
-      
+
+
 
       CATATAN
       SISTEM:
 
-      
+
 
       Log ini mencatat aktivitas workstation.
 
-      
 
-      Log
-      ini tidak menentukan apakah suatu aktivitas dihasilkan oleh input fisik, macro,
-      atau tugas terjadwal.'
+
+      Log ini tidak
+      menentukan apakah suatu aktivitas dihasilkan oleh input fisik, macro, atau
+      tugas terjadwal.'
   document2:
     evidenceID: E10_AUTOMATIC_TASK_HISTORY
     tabName: AUTOMATIC TASK HISTORY
