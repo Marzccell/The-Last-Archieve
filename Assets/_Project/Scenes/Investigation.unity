@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 29346796}
   - component: {fileID: 29346798}
   - component: {fileID: 29346797}
+  - component: {fileID: 29346799}
   m_Layer: 5
   m_Name: ConfirmationLabel
   m_TagString: Untagged
@@ -351,6 +352,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29346795}
   m_CullTransparentMesh: 1
+--- !u!114 &29346799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29346795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: FINAL CONFIRMATION
+  indonesianText: KONFIRMASI AKHIR
 --- !u!1 &30233346
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +788,7 @@ GameObject:
   - component: {fileID: 56912946}
   - component: {fileID: 56912948}
   - component: {fileID: 56912947}
+  - component: {fileID: 56912949}
   m_Layer: 5
   m_Name: ConfirmationDescription
   m_TagString: Untagged
@@ -899,6 +915,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56912945}
   m_CullTransparentMesh: 1
+--- !u!114 &56912949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56912945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: This action cannot be undone. The timer will stop immediately.
+  indonesianText: Tindakan ini tidak dapat dibatalkan. Timer akan langsung berhenti.
 --- !u!1 &57905814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1884,7 @@ GameObject:
   - component: {fileID: 120048719}
   - component: {fileID: 120048721}
   - component: {fileID: 120048720}
+  - component: {fileID: 120048722}
   m_Layer: 5
   m_Name: ConfirmationTitle
   m_TagString: Untagged
@@ -1980,6 +2011,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120048718}
   m_CullTransparentMesh: 1
+--- !u!114 &120048722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120048718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Submit this investigation report?
+  indonesianText: Kirim laporan investigasi ini?
 --- !u!1 &126579470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,6 +3108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: a17_archive_shelf
   optionDisplayName: A-17 Archive Shelf
+  indonesianDisplayName: A-17 Rak Arsip
   optionToggle: {fileID: 189705510}
   cardImage: {fileID: 189705508}
   cardOutline: {fileID: 189705507}
@@ -3477,6 +3523,7 @@ GameObject:
   - component: {fileID: 233140231}
   - component: {fileID: 233140233}
   - component: {fileID: 233140232}
+  - component: {fileID: 233140234}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3603,6 +3650,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233140230}
   m_CullTransparentMesh: 1
+--- !u!114 &233140234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233140230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CONFIRM SUBMISSION
+  indonesianText: KONFIRMASI JAWABAN
 --- !u!1 &244984980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,6 +4075,7 @@ GameObject:
   - component: {fileID: 258010748}
   - component: {fileID: 258010750}
   - component: {fileID: 258010749}
+  - component: {fileID: 258010751}
   m_Layer: 5
   m_Name: QuestionLabel
   m_TagString: Untagged
@@ -4140,6 +4202,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258010747}
   m_CullTransparentMesh: 1
+--- !u!114 &258010751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258010747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: 01   WHO STOLE THE ROYAL SAPPHIRE?
+  indonesianText: 01   SIAPA YANG MENCURI ROYAL SAPPHIRE?
 --- !u!1 &274778402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,6 +5483,7 @@ GameObject:
   - component: {fileID: 350759936}
   - component: {fileID: 350759938}
   - component: {fileID: 350759937}
+  - component: {fileID: 350759939}
   m_Layer: 5
   m_Name: LocationText
   m_TagString: Untagged
@@ -5533,6 +5610,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350759935}
   m_CullTransparentMesh: 1
+--- !u!114 &350759939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350759935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: LOCATION     OUTGOING CRATE C-07
+  indonesianText: LOKASI     PETI RESTORASI C-07
 --- !u!1 &364852917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6343,6 +6434,7 @@ GameObject:
   - component: {fileID: 444216986}
   - component: {fileID: 444216988}
   - component: {fileID: 444216987}
+  - component: {fileID: 444216989}
   m_Layer: 5
   m_Name: DatabaseLabelText
   m_TagString: Untagged
@@ -6469,6 +6561,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444216985}
   m_CullTransparentMesh: 1
+--- !u!114 &444216989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444216985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: MUSEUM PERSONNEL DATABASE / CASE 07
+  indonesianText: DATABASE PERSONEL MUSEUM / KASUS 07
 --- !u!1 &451370537
 GameObject:
   m_ObjectHideFlags: 0
@@ -6480,6 +6586,7 @@ GameObject:
   - component: {fileID: 451370538}
   - component: {fileID: 451370540}
   - component: {fileID: 451370539}
+  - component: {fileID: 451370541}
   m_Layer: 5
   m_Name: OperationalAccessLabel
   m_TagString: Untagged
@@ -6606,6 +6713,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451370537}
   m_CullTransparentMesh: 1
+--- !u!114 &451370541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451370537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: OPERATIONAL ACCESS
+  indonesianText: AKSES OPERASIONAL
 --- !u!1 &453350362
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,6 +8552,7 @@ GameObject:
   - component: {fileID: 612826958}
   - component: {fileID: 612826960}
   - component: {fileID: 612826959}
+  - component: {fileID: 612826961}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -8557,6 +8679,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612826957}
   m_CullTransparentMesh: 1
+--- !u!114 &612826961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612826957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: RETURN TO MAIN MENU
+  indonesianText: KEMBALI KE MENU UTAMA
 --- !u!1 &612855047
 GameObject:
   m_ObjectHideFlags: 0
@@ -9599,6 +9735,7 @@ GameObject:
   - component: {fileID: 688979599}
   - component: {fileID: 688979601}
   - component: {fileID: 688979600}
+  - component: {fileID: 688979602}
   m_Layer: 5
   m_Name: ResultMessage
   m_TagString: Untagged
@@ -9728,6 +9865,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688979598}
   m_CullTransparentMesh: 1
+--- !u!114 &688979602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688979598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: 'Your final deduction is incorrect.
+
+    Olivia concealed the original
+    artifact inside Outgoing Restoration Crate C-07.'
+  indonesianText: 'Deduksi akhir kalian salah.
+
+    Olivia menyembunyikan artefak
+    asli di dalam Peti Restorasi C-07.'
 --- !u!1 &691704169
 GameObject:
   m_ObjectHideFlags: 0
@@ -10483,6 +10640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: east_service_passage
   optionDisplayName: East Service Passage
+  indonesianDisplayName: Jalur Servis Timur
   optionToggle: {fileID: 772564836}
   cardImage: {fileID: 772564834}
   cardOutline: {fileID: 772564833}
@@ -11095,6 +11253,7 @@ GameObject:
   - component: {fileID: 871644769}
   - component: {fileID: 871644771}
   - component: {fileID: 871644770}
+  - component: {fileID: 871644772}
   m_Layer: 5
   m_Name: TimeUpTitle
   m_TagString: Untagged
@@ -11221,6 +11380,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871644768}
   m_CullTransparentMesh: 1
+--- !u!114 &871644772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871644768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: TIME'S UP
+  indonesianText: WAKTU HABIS
 --- !u!1 &874469058
 GameObject:
   m_ObjectHideFlags: 0
@@ -11950,6 +12123,7 @@ GameObject:
   - component: {fileID: 923843866}
   - component: {fileID: 923843868}
   - component: {fileID: 923843867}
+  - component: {fileID: 923843869}
   m_Layer: 5
   m_Name: SummaryLabel
   m_TagString: Untagged
@@ -12076,6 +12250,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923843865}
   m_CullTransparentMesh: 1
+--- !u!114 &923843869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923843865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: ORIGINAL LOCATION
+  indonesianText: LOKASI ASLI
 --- !u!1 &945376592
 GameObject:
   m_ObjectHideFlags: 0
@@ -13168,6 +13356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: ethan
   optionDisplayName: Ethan
+  indonesianDisplayName: 
   optionToggle: {fileID: 1058472005}
   cardImage: {fileID: 1058472003}
   cardOutline: {fileID: 1058472002}
@@ -14837,6 +15026,7 @@ GameObject:
   - component: {fileID: 1184646099}
   - component: {fileID: 1184646101}
   - component: {fileID: 1184646100}
+  - component: {fileID: 1184646102}
   m_Layer: 5
   m_Name: OptionSubtitle
   m_TagString: Untagged
@@ -14963,6 +15153,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184646098}
   m_CullTransparentMesh: 1
+--- !u!114 &1184646102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184646098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Security Guard
+  indonesianText: Petugas Keamanan
 --- !u!1 &1188217482
 GameObject:
   m_ObjectHideFlags: 0
@@ -15122,6 +15326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: grace
   optionDisplayName: Grace
+  indonesianDisplayName: 
   optionToggle: {fileID: 1188217487}
   cardImage: {fileID: 1188217485}
   cardOutline: {fileID: 1188217484}
@@ -15839,6 +16044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: daniel
   optionDisplayName: Daniel
+  indonesianDisplayName: 
   optionToggle: {fileID: 1220412377}
   cardImage: {fileID: 1220412375}
   cardOutline: {fileID: 1220412374}
@@ -16126,6 +16332,7 @@ GameObject:
   - component: {fileID: 1229319137}
   - component: {fileID: 1229319139}
   - component: {fileID: 1229319138}
+  - component: {fileID: 1229319140}
   m_Layer: 5
   m_Name: ResultMessage
   m_TagString: Untagged
@@ -16255,6 +16462,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229319136}
   m_CullTransparentMesh: 1
+--- !u!114 &1229319140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229319136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: "Your deduction is correct. \nYou identified the thief and the artifact's
+    final location."
+  indonesianText: "Deduksi kalian benar. \nKalian berhasil mengidentifikasi pencuri
+    dan lokasi akhir artefak."
 --- !u!1 &1235570634
 GameObject:
   m_ObjectHideFlags: 0
@@ -17180,6 +17403,7 @@ GameObject:
   - component: {fileID: 1315714695}
   - component: {fileID: 1315714697}
   - component: {fileID: 1315714696}
+  - component: {fileID: 1315714698}
   m_Layer: 5
   m_Name: OptionSubtitle
   m_TagString: Untagged
@@ -17306,6 +17530,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315714694}
   m_CullTransparentMesh: 1
+--- !u!114 &1315714698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315714694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Administrative Staff
+  indonesianText: Staf Administrasi
 --- !u!1 &1319827691
 GameObject:
   m_ObjectHideFlags: 0
@@ -18455,6 +18693,7 @@ GameObject:
   - component: {fileID: 1407783789}
   - component: {fileID: 1407783791}
   - component: {fileID: 1407783790}
+  - component: {fileID: 1407783792}
   m_Layer: 5
   m_Name: TimeUpDescription
   m_TagString: Untagged
@@ -18586,6 +18825,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407783788}
   m_CullTransparentMesh: 1
+--- !u!114 &1407783792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407783788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: 'The investigation window has ended.
+
+
+
+    Your team failed to submit
+    a final conclusion in time.'
+  indonesianText: 'Waktu investigasi telah berakhir.
+
+
+
+    Tim kalian gagal mengirimkan
+    kesimpulan akhir tepat waktu.'
 --- !u!1 &1414505468
 GameObject:
   m_ObjectHideFlags: 0
@@ -18597,6 +18860,7 @@ GameObject:
   - component: {fileID: 1414505469}
   - component: {fileID: 1414505471}
   - component: {fileID: 1414505470}
+  - component: {fileID: 1414505472}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -18723,6 +18987,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414505468}
   m_CullTransparentMesh: 1
+--- !u!114 &1414505472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414505468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CHARACTER FILE
+  indonesianText: FILE KARAKTER
 --- !u!1 &1427997059
 GameObject:
   m_ObjectHideFlags: 0
@@ -18882,6 +19160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: lucas
   optionDisplayName: Lucas
+  indonesianDisplayName: 
   optionToggle: {fileID: 1427997064}
   cardImage: {fileID: 1427997062}
   cardOutline: {fileID: 1427997061}
@@ -20096,6 +20375,7 @@ GameObject:
   - component: {fileID: 1503360846}
   - component: {fileID: 1503360848}
   - component: {fileID: 1503360847}
+  - component: {fileID: 1503360849}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -20222,6 +20502,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503360845}
   m_CullTransparentMesh: 1
+--- !u!114 &1503360849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503360845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: REVIEW SUBMISSION
+  indonesianText: TINJAU JAWABAN
 --- !u!1 &1505271790
 GameObject:
   m_ObjectHideFlags: 0
@@ -21212,6 +21506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: c07_restoration_crate
   optionDisplayName: C-07 Restoration Crate
+  indonesianDisplayName: C-07 Peti Restorasi
   optionToggle: {fileID: 1550233197}
   cardImage: {fileID: 1550233195}
   cardOutline: {fileID: 1550233194}
@@ -21233,6 +21528,7 @@ GameObject:
   - component: {fileID: 1556702960}
   - component: {fileID: 1556702962}
   - component: {fileID: 1556702961}
+  - component: {fileID: 1556702963}
   m_Layer: 5
   m_Name: OptionSubtitle
   m_TagString: Untagged
@@ -21279,7 +21575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exhibition Manager
+  m_text: Museum Director
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21359,6 +21655,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556702959}
   m_CullTransparentMesh: 1
+--- !u!114 &1556702963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556702959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Museum Director
+  indonesianText: Direktur Museum
 --- !u!1 &1560289982
 GameObject:
   m_ObjectHideFlags: 0
@@ -22404,6 +22714,7 @@ GameObject:
   - component: {fileID: 1619552236}
   - component: {fileID: 1619552238}
   - component: {fileID: 1619552237}
+  - component: {fileID: 1619552239}
   m_Layer: 5
   m_Name: ResultTitle
   m_TagString: Untagged
@@ -22530,6 +22841,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619552235}
   m_CullTransparentMesh: 1
+--- !u!114 &1619552239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619552235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CASE SOLVED
+  indonesianText: KASUS TERPECAHKAN
 --- !u!1 &1638809765
 GameObject:
   m_ObjectHideFlags: 0
@@ -23254,6 +23579,7 @@ GameObject:
   - component: {fileID: 1707678861}
   - component: {fileID: 1707678863}
   - component: {fileID: 1707678862}
+  - component: {fileID: 1707678864}
   m_Layer: 5
   m_Name: SummaryLabel
   m_TagString: Untagged
@@ -23380,6 +23706,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707678860}
   m_CullTransparentMesh: 1
+--- !u!114 &1707678864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707678860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: ORIGINAL THIEF
+  indonesianText: PENCURI ASLI
 --- !u!1 &1713131430
 GameObject:
   m_ObjectHideFlags: 0
@@ -23544,6 +23884,7 @@ GameObject:
   - component: {fileID: 1716722066}
   - component: {fileID: 1716722068}
   - component: {fileID: 1716722067}
+  - component: {fileID: 1716722069}
   m_Layer: 5
   m_Name: OptionSubtitle
   m_TagString: Untagged
@@ -23670,6 +24011,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716722065}
   m_CullTransparentMesh: 1
+--- !u!114 &1716722069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716722065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: External Technician
+  indonesianText: Teknisi Eksternal
 --- !u!1 &1728332751
 GameObject:
   m_ObjectHideFlags: 0
@@ -24097,6 +24452,7 @@ GameObject:
   - component: {fileID: 1761973574}
   - component: {fileID: 1761973576}
   - component: {fileID: 1761973575}
+  - component: {fileID: 1761973577}
   m_Layer: 5
   m_Name: SummaryHeader
   m_TagString: Untagged
@@ -24223,6 +24579,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761973573}
   m_CullTransparentMesh: 1
+--- !u!114 &1761973577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761973573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: VERIFIED SOLUTION
+  indonesianText: SOLUSI TERVERIFIKASI
 --- !u!1 &1769787479
 GameObject:
   m_ObjectHideFlags: 0
@@ -24381,6 +24751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: c02_replica_cabinet
   optionDisplayName: C-02 Replica Cabinet
+  indonesianDisplayName: C-02 Lemari Replika
   optionToggle: {fileID: 1769787484}
   cardImage: {fileID: 1769787482}
   cardOutline: {fileID: 1769787481}
@@ -24402,6 +24773,7 @@ GameObject:
   - component: {fileID: 1773088294}
   - component: {fileID: 1773088296}
   - component: {fileID: 1773088295}
+  - component: {fileID: 1773088297}
   m_Layer: 5
   m_Name: ResultTitle
   m_TagString: Untagged
@@ -24528,6 +24900,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773088293}
   m_CullTransparentMesh: 1
+--- !u!114 &1773088297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773088293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CASE UNSOLVED
+  indonesianText: KASUS BELUM TERPECAHKAN
 --- !u!1 &1781439853
 GameObject:
   m_ObjectHideFlags: 0
@@ -24813,6 +25199,7 @@ GameObject:
   - component: {fileID: 1815840434}
   - component: {fileID: 1815840436}
   - component: {fileID: 1815840435}
+  - component: {fileID: 1815840437}
   m_Layer: 5
   m_Name: ListTitleText
   m_TagString: Untagged
@@ -24939,6 +25326,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815840433}
   m_CullTransparentMesh: 1
+--- !u!114 &1815840437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815840433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: AUTHORIZED PERSONNEL
+  indonesianText: PERSONEL BERWENANG
 --- !u!1 &1818425922
 GameObject:
   m_ObjectHideFlags: 0
@@ -26278,6 +26679,7 @@ GameObject:
   - component: {fileID: 1900791642}
   - component: {fileID: 1900791644}
   - component: {fileID: 1900791643}
+  - component: {fileID: 1900791645}
   m_Layer: 5
   m_Name: BoardInstruction
   m_TagString: Untagged
@@ -26404,6 +26806,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900791641}
   m_CullTransparentMesh: 1
+--- !u!114 &1900791645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900791641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Review the evidence and complete your final deduction.
+  indonesianText: Tinjau seluruh bukti dan selesaikan deduksi akhir kalian.
 --- !u!1 &1907005274
 GameObject:
   m_ObjectHideFlags: 0
@@ -26552,6 +26968,7 @@ GameObject:
   - component: {fileID: 1943539708}
   - component: {fileID: 1943539710}
   - component: {fileID: 1943539709}
+  - component: {fileID: 1943539711}
   m_Layer: 5
   m_Name: OptionSubtitle
   m_TagString: Untagged
@@ -26678,6 +27095,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943539707}
   m_CullTransparentMesh: 1
+--- !u!114 &1943539711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943539707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: Curator
+  indonesianText: Kurator
 --- !u!1 &1944961790
 GameObject:
   m_ObjectHideFlags: 0
@@ -27327,6 +27758,7 @@ GameObject:
   - component: {fileID: 1971550399}
   - component: {fileID: 1971550401}
   - component: {fileID: 1971550400}
+  - component: {fileID: 1971550402}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -27453,6 +27885,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971550398}
   m_CullTransparentMesh: 1
+--- !u!114 &1971550402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971550398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: RETURN TO MAIN MENU
+  indonesianText: KEMBALI KE MENU UTAMA
 --- !u!1 &1977328205
 GameObject:
   m_ObjectHideFlags: 0
@@ -27464,6 +27910,7 @@ GameObject:
   - component: {fileID: 1977328206}
   - component: {fileID: 1977328208}
   - component: {fileID: 1977328207}
+  - component: {fileID: 1977328209}
   m_Layer: 5
   m_Name: QuestionLabel
   m_TagString: Untagged
@@ -27590,6 +28037,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977328205}
   m_CullTransparentMesh: 1
+--- !u!114 &1977328209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977328205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: 02   WHERE IS THE ROYAL SAPPHIRE HIDDEN?
+  indonesianText: 02   DI MANA ROYAL SAPPHIRE DISEMBUNYIKAN?
 --- !u!1 &1988670621
 GameObject:
   m_ObjectHideFlags: 0
@@ -28973,6 +29434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: m04_tool_case
   optionDisplayName: M-04 Tool Case
+  indonesianDisplayName: M-04 Kotak Peralatan
   optionToggle: {fileID: 2042222671}
   cardImage: {fileID: 2042222669}
   cardOutline: {fileID: 2042222668}
@@ -28994,6 +29456,7 @@ GameObject:
   - component: {fileID: 2053792211}
   - component: {fileID: 2053792213}
   - component: {fileID: 2053792212}
+  - component: {fileID: 2053792214}
   m_Layer: 5
   m_Name: SuspectText
   m_TagString: Untagged
@@ -29120,6 +29583,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053792210}
   m_CullTransparentMesh: 1
+--- !u!114 &2053792214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053792210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CULPRIT OLIVIA
+  indonesianText: PELAKU OLIVIA
 --- !u!1 &2059869007
 GameObject:
   m_ObjectHideFlags: 0
@@ -29327,6 +29804,7 @@ GameObject:
   - component: {fileID: 2071121877}
   - component: {fileID: 2071121879}
   - component: {fileID: 2071121878}
+  - component: {fileID: 2071121880}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -29453,6 +29931,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071121876}
   m_CullTransparentMesh: 1
+--- !u!114 &2071121880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071121876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: CANCEL
+  indonesianText: BATAL
 --- !u!1 &2073528824
 GameObject:
   m_ObjectHideFlags: 0
@@ -29601,6 +30093,7 @@ GameObject:
   - component: {fileID: 2076339769}
   - component: {fileID: 2076339771}
   - component: {fileID: 2076339770}
+  - component: {fileID: 2076339772}
   m_Layer: 5
   m_Name: SummaryHeader
   m_TagString: Untagged
@@ -29727,6 +30220,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076339768}
   m_CullTransparentMesh: 1
+--- !u!114 &2076339772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076339768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: YOUR SUBMITTED THEORY
+  indonesianText: TEORI YANG KALIAN AJUKAN
 --- !u!1 &2081517779
 GameObject:
   m_ObjectHideFlags: 0
@@ -29886,6 +30393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DetectiveOptionCard
   optionID: olivia
   optionDisplayName: Olivia
+  indonesianDisplayName: 
   optionToggle: {fileID: 2081517784}
   cardImage: {fileID: 2081517782}
   cardOutline: {fileID: 2081517781}
@@ -30044,6 +30552,7 @@ GameObject:
   - component: {fileID: 2099107708}
   - component: {fileID: 2099107710}
   - component: {fileID: 2099107709}
+  - component: {fileID: 2099107711}
   m_Layer: 5
   m_Name: ReferenceNoticeText
   m_TagString: Untagged
@@ -30170,6 +30679,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099107707}
   m_CullTransparentMesh: 1
+--- !u!114 &2099107711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099107707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: "REFERENCE ONLY \u2014 ACCESS INDICATES OPPORTUNITY, NOT GUILT."
+  indonesianText: "HANYA REFERENSI \u2014 AKSES MENUNJUKKAN KESEMPATAN, BUKAN KESALAHAN."
 --- !u!1 &2107355501
 GameObject:
   m_ObjectHideFlags: 0
@@ -30259,6 +30782,7 @@ GameObject:
   - component: {fileID: 2116371083}
   - component: {fileID: 2116371085}
   - component: {fileID: 2116371084}
+  - component: {fileID: 2116371086}
   m_Layer: 5
   m_Name: BoardTitle
   m_TagString: Untagged
@@ -30385,6 +30909,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116371082}
   m_CullTransparentMesh: 1
+--- !u!114 &2116371086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116371082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: DETECTIVE BOARD
+  indonesianText: PAPAN DETEKTIF
 --- !u!1 &2118037941
 GameObject:
   m_ObjectHideFlags: 0
@@ -30798,6 +31336,7 @@ GameObject:
   - component: {fileID: 2132211441}
   - component: {fileID: 2132211443}
   - component: {fileID: 2132211442}
+  - component: {fileID: 2132211444}
   m_Layer: 5
   m_Name: AreaAccessLabel
   m_TagString: Untagged
@@ -30924,6 +31463,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132211440}
   m_CullTransparentMesh: 1
+--- !u!114 &2132211444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132211440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  englishText: AREA ACCESS
+  indonesianText: AKSES AREA
 --- !u!1 &2146771514
 GameObject:
   m_ObjectHideFlags: 0

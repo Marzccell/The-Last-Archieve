@@ -12,6 +12,7 @@ public class DetectiveOptionCard : MonoBehaviour,
     [Header("Option Data")]
     [SerializeField] private string optionID;
     [SerializeField] private string optionDisplayName;
+    [SerializeField] private string indonesianDisplayName;
 
     [Header("References")]
     [SerializeField] private Toggle optionToggle;
@@ -40,7 +41,25 @@ public class DetectiveOptionCard : MonoBehaviour,
     private bool listenerRegistered;
 
     public string OptionID => optionID;
-    public string DisplayName => optionDisplayName;
+
+    public string DisplayName
+    {
+        get
+        {
+            bool isIndonesian =
+                LanguageManager.Instance != null &&
+                LanguageManager.Instance.CurrentLanguage ==
+                GameLanguage.Indonesian;
+
+            if (isIndonesian &&
+                !string.IsNullOrWhiteSpace(indonesianDisplayName))
+            {
+                return indonesianDisplayName;
+            }
+
+            return optionDisplayName;
+        }
+    }
 
     public Toggle Toggle
     {
@@ -68,11 +87,23 @@ public class DetectiveOptionCard : MonoBehaviour,
         if (optionToggle != null)
             optionToggle.transition = Selectable.Transition.None;
 
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged +=
+                HandleLanguageChanged;
+        }
+
         RefreshVisual();
     }
 
     private void OnDisable()
     {
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged -=
+                HandleLanguageChanged;
+        }
+
         isPointerInside = false;
     }
 
@@ -121,6 +152,11 @@ public class DetectiveOptionCard : MonoBehaviour,
     }
 
     private void HandleToggleChanged(bool isSelected)
+    {
+        RefreshVisual();
+    }
+
+    private void HandleLanguageChanged(GameLanguage language)
     {
         RefreshVisual();
     }
@@ -192,6 +228,9 @@ public class DetectiveOptionCard : MonoBehaviour,
 
         if (optionNameText != null)
         {
+            optionNameText.text =
+                DisplayName.ToUpperInvariant();
+
             optionNameText.color = selected
                 ? Color.white
                 : new Color32(231, 237, 241, 255);

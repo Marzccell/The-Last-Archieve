@@ -55,22 +55,45 @@ public class DetectiveBoardController : MonoBehaviour
 
     private bool submissionLocked;
 
+    private bool IsIndonesian =>
+        LanguageManager.Instance != null &&
+        LanguageManager.Instance.CurrentLanguage ==
+        GameLanguage.Indonesian;
+
     private void Awake()
     {
         SubscribeToCards(suspectCards);
         SubscribeToCards(locationCards);
 
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged +=
+                HandleLanguageChanged;
+        }
+
         if (closeBoardButton != null)
             closeBoardButton.onClick.AddListener(CloseBoard);
 
         if (reviewSubmissionButton != null)
-            reviewSubmissionButton.onClick.AddListener(ReviewSubmission);
+        {
+            reviewSubmissionButton.onClick.AddListener(
+                ReviewSubmission
+            );
+        }
 
         if (cancelButton != null)
-            cancelButton.onClick.AddListener(CloseConfirmation);
+        {
+            cancelButton.onClick.AddListener(
+                CloseConfirmation
+            );
+        }
 
         if (confirmSubmissionButton != null)
-            confirmSubmissionButton.onClick.AddListener(ConfirmSubmission);
+        {
+            confirmSubmissionButton.onClick.AddListener(
+                ConfirmSubmission
+            );
+        }
 
         if (successReturnToMenuButton != null)
         {
@@ -87,7 +110,10 @@ public class DetectiveBoardController : MonoBehaviour
         }
 
         if (countdownTimer != null)
-            countdownTimer.TimerExpired += HandleTimerExpired;
+        {
+            countdownTimer.TimerExpired +=
+                HandleTimerExpired;
+        }
 
         if (submissionConfirmationPanel != null)
             submissionConfirmationPanel.SetActive(false);
@@ -108,8 +134,18 @@ public class DetectiveBoardController : MonoBehaviour
         UnsubscribeFromCards(suspectCards);
         UnsubscribeFromCards(locationCards);
 
+        if (LanguageManager.Instance != null)
+        {
+            LanguageManager.Instance.LanguageChanged -=
+                HandleLanguageChanged;
+        }
+
         if (closeBoardButton != null)
-            closeBoardButton.onClick.RemoveListener(CloseBoard);
+        {
+            closeBoardButton.onClick.RemoveListener(
+                CloseBoard
+            );
+        }
 
         if (reviewSubmissionButton != null)
         {
@@ -119,7 +155,11 @@ public class DetectiveBoardController : MonoBehaviour
         }
 
         if (cancelButton != null)
-            cancelButton.onClick.RemoveListener(CloseConfirmation);
+        {
+            cancelButton.onClick.RemoveListener(
+                CloseConfirmation
+            );
+        }
 
         if (confirmSubmissionButton != null)
         {
@@ -143,10 +183,15 @@ public class DetectiveBoardController : MonoBehaviour
         }
 
         if (countdownTimer != null)
-            countdownTimer.TimerExpired -= HandleTimerExpired;
+        {
+            countdownTimer.TimerExpired -=
+                HandleTimerExpired;
+        }
     }
 
-    private void SubscribeToCards(DetectiveOptionCard[] cards)
+    private void SubscribeToCards(
+        DetectiveOptionCard[] cards
+    )
     {
         if (cards == null)
             return;
@@ -162,7 +207,9 @@ public class DetectiveBoardController : MonoBehaviour
         }
     }
 
-    private void UnsubscribeFromCards(DetectiveOptionCard[] cards)
+    private void UnsubscribeFromCards(
+        DetectiveOptionCard[] cards
+    )
     {
         if (cards == null)
             return;
@@ -178,6 +225,37 @@ public class DetectiveBoardController : MonoBehaviour
         }
     }
 
+    private void HandleLanguageChanged(
+        GameLanguage language
+    )
+    {
+        RefreshSelection();
+
+        if (submissionConfirmationPanel != null &&
+            submissionConfirmationPanel.activeSelf)
+        {
+            if (suspectValue != null &&
+                selectedSuspect != null)
+            {
+                suspectValue.text =
+                    selectedSuspect.DisplayName;
+            }
+
+            if (locationValue != null &&
+                selectedLocation != null)
+            {
+                locationValue.text =
+                    selectedLocation.DisplayName;
+            }
+        }
+
+        if (incorrectResultPanel != null &&
+            incorrectResultPanel.activeSelf)
+        {
+            UpdateIncorrectResultValues();
+        }
+    }
+
     private void HandleSelectionChanged(bool value)
     {
         RefreshSelection();
@@ -185,8 +263,11 @@ public class DetectiveBoardController : MonoBehaviour
 
     private void RefreshSelection()
     {
-        selectedSuspect = FindSelectedCard(suspectCards);
-        selectedLocation = FindSelectedCard(locationCards);
+        selectedSuspect =
+            FindSelectedCard(suspectCards);
+
+        selectedLocation =
+            FindSelectedCard(locationCards);
 
         bool selectionComplete =
             selectedSuspect != null &&
@@ -194,7 +275,10 @@ public class DetectiveBoardController : MonoBehaviour
             !submissionLocked;
 
         if (reviewSubmissionButton != null)
-            reviewSubmissionButton.interactable = selectionComplete;
+        {
+            reviewSubmissionButton.interactable =
+                selectionComplete;
+        }
 
         UpdateSummary(
             selectedSuspect != null &&
@@ -203,7 +287,8 @@ public class DetectiveBoardController : MonoBehaviour
     }
 
     private DetectiveOptionCard FindSelectedCard(
-        DetectiveOptionCard[] cards)
+        DetectiveOptionCard[] cards
+    )
     {
         if (cards == null)
             return null;
@@ -226,26 +311,43 @@ public class DetectiveBoardController : MonoBehaviour
         if (selectionSummary == null)
             return;
 
+        string notSelected = IsIndonesian
+            ? "Belum dipilih"
+            : "Not selected";
+
         string suspectName = selectedSuspect != null
             ? selectedSuspect.DisplayName
-            : "Not selected";
+            : notSelected;
 
         string locationName = selectedLocation != null
             ? selectedLocation.DisplayName
-            : "Not selected";
+            : notSelected;
+
+        string heading = IsIndonesian
+            ? "TEORI TERPILIH"
+            : "SELECTED THEORY";
 
         if (selectionComplete)
         {
             selectionSummary.text =
-                "<b>SELECTED THEORY</b>\n" +
+                "<b>" + heading + "</b>\n" +
                 suspectName + " — " + locationName;
         }
         else
         {
+            string suspectLabel = IsIndonesian
+                ? "Tersangka: "
+                : "Suspect: ";
+
+            string locationLabel = IsIndonesian
+                ? "Lokasi: "
+                : "Location: ";
+
             selectionSummary.text =
-                "<b>SELECTED THEORY</b>\n" +
-                "Suspect: " + suspectName +
-                "    |    Location: " + locationName;
+                "<b>" + heading + "</b>\n" +
+                suspectLabel + suspectName +
+                "    |    " +
+                locationLabel + locationName;
         }
     }
 
@@ -291,22 +393,34 @@ public class DetectiveBoardController : MonoBehaviour
         }
 
         if (suspectValue != null)
-            suspectValue.text = selectedSuspect.DisplayName;
+        {
+            suspectValue.text =
+                selectedSuspect.DisplayName;
+        }
 
         if (locationValue != null)
-            locationValue.text = selectedLocation.DisplayName;
+        {
+            locationValue.text =
+                selectedLocation.DisplayName;
+        }
 
         if (submissionConfirmationPanel != null)
         {
             submissionConfirmationPanel.SetActive(true);
-            submissionConfirmationPanel.transform.SetAsLastSibling();
+
+            submissionConfirmationPanel.transform
+                .SetAsLastSibling();
         }
     }
 
     private void CloseConfirmation()
     {
         if (submissionConfirmationPanel != null)
-            submissionConfirmationPanel.SetActive(false);
+        {
+            submissionConfirmationPanel.SetActive(
+                false
+            );
+        }
     }
 
     private void ConfirmSubmission()
@@ -331,10 +445,16 @@ public class DetectiveBoardController : MonoBehaviour
         submissionLocked = true;
 
         if (confirmSubmissionButton != null)
-            confirmSubmissionButton.interactable = false;
+        {
+            confirmSubmissionButton.interactable =
+                false;
+        }
 
         if (reviewSubmissionButton != null)
-            reviewSubmissionButton.interactable = false;
+        {
+            reviewSubmissionButton.interactable =
+                false;
+        }
 
         if (countdownTimer != null)
             countdownTimer.StopTimer();
@@ -397,24 +517,43 @@ public class DetectiveBoardController : MonoBehaviour
         if (successResultPanel != null)
             successResultPanel.SetActive(false);
 
-        if (submittedSuspectText != null)
-        {
-            submittedSuspectText.text =
-                "SUSPECT     " +
-                selectedSuspect.DisplayName.ToUpper();
-        }
-
-        if (submittedLocationText != null)
-        {
-            submittedLocationText.text =
-                "LOCATION     " +
-                selectedLocation.DisplayName.ToUpper();
-        }
+        UpdateIncorrectResultValues();
 
         if (incorrectResultPanel != null)
         {
             incorrectResultPanel.SetActive(true);
-            incorrectResultPanel.transform.SetAsLastSibling();
+
+            incorrectResultPanel.transform
+                .SetAsLastSibling();
+        }
+    }
+
+    private void UpdateIncorrectResultValues()
+    {
+        if (submittedSuspectText != null &&
+            selectedSuspect != null)
+        {
+            string label = IsIndonesian
+                ? "TERSANGKA     "
+                : "SUSPECT     ";
+
+            submittedSuspectText.text =
+                label +
+                selectedSuspect.DisplayName
+                    .ToUpperInvariant();
+        }
+
+        if (submittedLocationText != null &&
+            selectedLocation != null)
+        {
+            string label = IsIndonesian
+                ? "LOKASI     "
+                : "LOCATION     ";
+
+            submittedLocationText.text =
+                label +
+                selectedLocation.DisplayName
+                    .ToUpperInvariant();
         }
     }
 
@@ -423,10 +562,16 @@ public class DetectiveBoardController : MonoBehaviour
         submissionLocked = true;
 
         if (confirmSubmissionButton != null)
-            confirmSubmissionButton.interactable = false;
+        {
+            confirmSubmissionButton.interactable =
+                false;
+        }
 
         if (reviewSubmissionButton != null)
-            reviewSubmissionButton.interactable = false;
+        {
+            reviewSubmissionButton.interactable =
+                false;
+        }
 
         CloseConfirmation();
 
