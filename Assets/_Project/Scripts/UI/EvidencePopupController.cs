@@ -118,8 +118,13 @@ public class EvidencePopupController : MonoBehaviour
         document1 = firstDocument;
         document2 = secondDocument;
 
-        evidencePopup.SetActive(true);
+        // Siapkan seluruh isi dan warna tab terlebih dahulu
+        // ketika popup masih belum terlihat.
         ShowDocument(0);
+
+        // Setelah tampilannya siap, aktifkan popup.
+        // PopupOpenTransition akan langsung menjalankan animasi.
+        evidencePopup.SetActive(true);
     }
 
     public void CloseEvidence()
