@@ -1204,6 +1204,8 @@ GameObject:
   - component: {fileID: 92791867}
   - component: {fileID: 92791869}
   - component: {fileID: 92791868}
+  - component: {fileID: 92791871}
+  - component: {fileID: 92791870}
   m_Layer: 5
   m_Name: SuccessResultPanel
   m_TagString: Untagged
@@ -1269,6 +1271,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92791866}
   m_CullTransparentMesh: 1
+--- !u!114 &92791870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92791866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6274428e33cc54897428a36d61c559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupOpenTransition
+  content: {fileID: 635599107}
+  canvasGroup: {fileID: 92791871}
+  duration: 0.3
+  startScale: 0.92
+--- !u!225 &92791871
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92791866}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &102916937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2840,8 @@ GameObject:
   - component: {fileID: 172790789}
   - component: {fileID: 172790791}
   - component: {fileID: 172790790}
+  - component: {fileID: 172790793}
+  - component: {fileID: 172790792}
   m_Layer: 5
   m_Name: IncorrectResultPanel
   m_TagString: Untagged
@@ -2875,6 +2907,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172790788}
   m_CullTransparentMesh: 1
+--- !u!114 &172790792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172790788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6274428e33cc54897428a36d61c559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupOpenTransition
+  content: {fileID: 24391303}
+  canvasGroup: {fileID: 172790793}
+  duration: 0.3
+  startScale: 0.92
+--- !u!225 &172790793
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172790788}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &175783470
 GameObject:
   m_ObjectHideFlags: 0
