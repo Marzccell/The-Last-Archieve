@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 8d94a8313ca05484381f8b8d385f961c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -589631143662546188
+    second: TheLastArchive_Logo_0
+  - first:
+      213: 1780720062910566898
+    second: TheLastArchive_Logo_1
+  - first:
+      213: -3763387505790741058
+    second: TheLastArchive_Logo_2
+  - first:
+      213: -5280248127577324661
+    second: TheLastArchive_Logo_3
+  - first:
+      213: -3269927627642546224
+    second: TheLastArchive_Logo_4
+  - first:
+      213: -7090229074852149384
+    second: TheLastArchive_Logo_5
+  - first:
+      213: 7000253290805645744
+    second: TheLastArchive_Logo_6
+  - first:
+      213: -4536097151975355475
+    second: TheLastArchive_Logo_7
+  - first:
+      213: 4733217089405989454
+    second: TheLastArchive_Logo_8
+  - first:
+      213: 8387366273246848311
+    second: TheLastArchive_Logo_9
+  - first:
+      213: -4529118085528075062
+    second: TheLastArchive_Logo_10
+  - first:
+      213: 4630951020927682492
+    second: TheLastArchive_Logo_11
+  - first:
+      213: 3782344759535840308
+    second: TheLastArchive_Logo_12
+  - first:
+      213: 440984968460562641
+    second: TheLastArchive_Logo_13
+  - first:
+      213: 5356262813141979622
+    second: TheLastArchive_Logo_14
+  - first:
+      213: -284512926653189052
+    second: TheLastArchive_Logo_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 448
+        width: 1099
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f29c7d499531d7f0800000000000000
+      internalID: -589631143662546188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 342
+        width: 121
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1123a667366b810800000000000000
+      internalID: 1780720062910566898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 342
+        width: 128
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb51335b003c5cbc0800000000000000
+      internalID: -3763387505790741058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_3
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 342
+        width: 91
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8305ddcd4ac8b6b0800000000000000
+      internalID: -5280248127577324661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_4
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 342
+        width: 102
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d75121c522ee92d0800000000000000
+      internalID: -3269927627642546224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_5
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 342
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8778a49d8327a9d90800000000000000
+      internalID: -7090229074852149384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_6
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 341
+        width: 80
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1da307745e52160800000000000000
+      internalID: 7000253290805645744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_7
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 342
+        width: 105
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab09dd6cab8c01c0800000000000000
+      internalID: -4536097151975355475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 169
+        width: 153
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e423ada7dd3cfa140800000000000000
+      internalID: 4733217089405989454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_9
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 168
+        width: 130
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73568f5ff29e56470800000000000000
+      internalID: 8387366273246848311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_10
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 166
+        width: 121
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac44d46f8175521c0800000000000000
+      internalID: -4529118085528075062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_11
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 169
+        width: 146
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb780aeea61744040800000000000000
+      internalID: 4630951020927682492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_12
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 169
+        width: 59
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ca132e4869d7430800000000000000
+      internalID: 3782344759535840308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_13
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 167
+        width: 140
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0f06c0e71be1600800000000000000
+      internalID: 440984968460562641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_14
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 169
+        width: 103
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e156fc56a4455a40800000000000000
+      internalID: 5356262813141979622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheLastArchive_Logo_15
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 11
+        width: 676
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44474d820053d0cf0800000000000000
+      internalID: -284512926653189052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TheLastArchive_Logo_0: -589631143662546188
+      TheLastArchive_Logo_1: 1780720062910566898
+      TheLastArchive_Logo_10: -4529118085528075062
+      TheLastArchive_Logo_11: 4630951020927682492
+      TheLastArchive_Logo_12: 3782344759535840308
+      TheLastArchive_Logo_13: 440984968460562641
+      TheLastArchive_Logo_14: 5356262813141979622
+      TheLastArchive_Logo_15: -284512926653189052
+      TheLastArchive_Logo_2: -3763387505790741058
+      TheLastArchive_Logo_3: -5280248127577324661
+      TheLastArchive_Logo_4: -3269927627642546224
+      TheLastArchive_Logo_5: -7090229074852149384
+      TheLastArchive_Logo_6: 7000253290805645744
+      TheLastArchive_Logo_7: -4536097151975355475
+      TheLastArchive_Logo_8: 4733217089405989454
+      TheLastArchive_Logo_9: 8387366273246848311
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
