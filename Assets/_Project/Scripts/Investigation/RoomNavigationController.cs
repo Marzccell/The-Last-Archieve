@@ -5,9 +5,12 @@ using UnityEngine.UI;
 public class RoomNavigationController : MonoBehaviour
 {
     [Header("Room Panels")]
-    [SerializeField] private GameObject mainExhibitionHallPanel;
-    [SerializeField] private GameObject securityOfficePanel;
-    [SerializeField] private GameObject staffOfficePanel;
+    [SerializeField] private GameObject mainExhibitionHall;
+    [SerializeField] private GameObject securityOffice;
+    [SerializeField] private GameObject staffOffice;
+
+    [Header("Room Title")]
+    [SerializeField] private TMP_Text roomTitleText;
 
     [Header("Map")]
     [SerializeField] private GameObject mapOverlay;
@@ -17,8 +20,15 @@ public class RoomNavigationController : MonoBehaviour
     [SerializeField] private Button securityOfficeButton;
     [SerializeField] private Button staffOfficeButton;
 
-    [Header("HUD")]
-    [SerializeField] private TMP_Text roomTitleText;
+    [Header("Map Current Location Indicators")]
+    [SerializeField] private GameObject mainExhibitionHallCurrentTag;
+    [SerializeField] private GameObject securityOfficeCurrentTag;
+    [SerializeField] private GameObject staffOfficeCurrentTag;
+
+    [Header("Map Active Borders")]
+    [SerializeField] private GameObject mainExhibitionHallActiveBorder;
+    [SerializeField] private GameObject securityOfficeActiveBorder;
+    [SerializeField] private GameObject staffOfficeActiveBorder;
 
     private void Start()
     {
@@ -38,7 +48,7 @@ public class RoomNavigationController : MonoBehaviour
     public void ShowMainExhibitionHall()
     {
         ShowRoom(
-            mainExhibitionHallPanel,
+            mainExhibitionHall,
             mainExhibitionHallButton,
             "MAIN EXHIBITION HALL"
         );
@@ -47,7 +57,7 @@ public class RoomNavigationController : MonoBehaviour
     public void ShowSecurityOffice()
     {
         ShowRoom(
-            securityOfficePanel,
+            securityOffice,
             securityOfficeButton,
             "SECURITY OFFICE"
         );
@@ -56,7 +66,7 @@ public class RoomNavigationController : MonoBehaviour
     public void ShowStaffOffice()
     {
         ShowRoom(
-            staffOfficePanel,
+            staffOffice,
             staffOfficeButton,
             "STAFF OFFICE"
         );
@@ -68,20 +78,20 @@ public class RoomNavigationController : MonoBehaviour
         string roomTitle
     )
     {
-        // Menampilkan room yang dipilih
-        mainExhibitionHallPanel.SetActive(
-            selectedRoom == mainExhibitionHallPanel
+        // Menampilkan hanya panel ruangan yang dipilih.
+        mainExhibitionHall.SetActive(
+            selectedRoom == mainExhibitionHall
         );
 
-        securityOfficePanel.SetActive(
-            selectedRoom == securityOfficePanel
+        securityOffice.SetActive(
+            selectedRoom == securityOffice
         );
 
-        staffOfficePanel.SetActive(
-            selectedRoom == staffOfficePanel
+        staffOffice.SetActive(
+            selectedRoom == staffOffice
         );
 
-        // Mengatur penanda room aktif
+        // Current room tidak dapat dipilih kembali.
         mainExhibitionHallButton.interactable =
             selectedButton != mainExhibitionHallButton;
 
@@ -91,8 +101,36 @@ public class RoomNavigationController : MonoBehaviour
         staffOfficeButton.interactable =
             selectedButton != staffOfficeButton;
 
+        // Menampilkan CURRENT LOCATION pada ruangan aktif.
+        mainExhibitionHallCurrentTag.SetActive(
+            selectedButton == mainExhibitionHallButton
+        );
+
+        securityOfficeCurrentTag.SetActive(
+            selectedButton == securityOfficeButton
+        );
+
+        staffOfficeCurrentTag.SetActive(
+            selectedButton == staffOfficeButton
+        );
+
+        // Menampilkan border gold pada ruangan aktif.
+        mainExhibitionHallActiveBorder.SetActive(
+            selectedButton == mainExhibitionHallButton
+        );
+
+        securityOfficeActiveBorder.SetActive(
+            selectedButton == securityOfficeButton
+        );
+
+        staffOfficeActiveBorder.SetActive(
+            selectedButton == staffOfficeButton
+        );
+
+        // Memperbarui nama ruangan pada HUD.
         roomTitleText.text = roomTitle;
 
+        // Menutup map setelah berpindah ruangan.
         CloseMap();
     }
 }
