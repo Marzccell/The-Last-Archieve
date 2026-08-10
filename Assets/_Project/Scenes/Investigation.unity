@@ -1828,10 +1828,10 @@ RectTransform:
   - {fileID: 1459163916}
   m_Father: {fileID: 488791567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.955, y: 0.04}
-  m_AnchorMax: {x: 0.985, y: 0.96}
-  m_AnchoredPosition: {x: 19, y: 23}
-  m_SizeDelta: {x: -17, y: 29}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -21, y: -16}
+  m_SizeDelta: {x: 18, y: -32}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &109589977
 MonoBehaviour:
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 535571082}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4779858
+  m_Size: 0.39394444
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7963,6 +7963,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1638809767}
   hotspotCountText: {fileID: 640281124}
+  presentationStyle: 0
   popupController: {fileID: 869402488}
 --- !u!114 &457077356
 MonoBehaviour:
@@ -8960,10 +8961,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1459163916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5220142}
+  m_AnchorMin: {x: 0, y: 0.60605556}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535571083
 MonoBehaviour:
@@ -12964,6 +12965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EvidencePopupController
   evidencePopup: {fileID: 1457785380}
+  museumDisplaySkin: {fileID: 1114167584}
   evidenceTitleText: {fileID: 498791881}
   evidenceMetaText: {fileID: 308747181}
   evidenceBodyText: {fileID: 1429478010}
@@ -14776,12 +14778,13 @@ RectTransform:
   - {fileID: 1477141751}
   - {fileID: 142984968}
   - {fileID: 488791567}
+  - {fileID: 1114167585}
   m_Father: {fileID: 1457785381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.15, y: 0.12}
-  m_AnchorMax: {x: 0.85, y: 0.88}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1300, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964609349
 MonoBehaviour:
@@ -16730,6 +16733,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapRoomHover
   roomButton: {fileID: 1104295546}
   hoverBorder: {fileID: 1410736393}
+--- !u!1 &1114167584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1114167585}
+  - component: {fileID: 1114167587}
+  - component: {fileID: 1114167586}
+  m_Layer: 5
+  m_Name: Skin_MuseumDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1114167585
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114167584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 964609348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 1620, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1114167586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114167584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d3334ad72234a7245a07a602f510a49b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1114167587
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114167584}
+  m_CullTransparentMesh: 1
 --- !u!1 &1115422369
 GameObject:
   m_ObjectHideFlags: 0
@@ -21855,6 +21933,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1120475919}
   hotspotCountText: {fileID: 34800889}
+  presentationStyle: 1
   popupController: {fileID: 869402488}
 --- !u!114 &1384376171
 MonoBehaviour:
@@ -22669,8 +22748,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 568.78076, y: -461.515}
-  m_SizeDelta: {x: 1089.5615, y: 883.03}
+  m_AnchoredPosition: {x: 550.16003, y: -477.58}
+  m_SizeDelta: {x: 1052.3201, y: 915.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429478010
 MonoBehaviour:
@@ -23015,7 +23094,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_SizeDelta: {x: -4, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1459854681
 GameObject:
@@ -24139,8 +24218,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 307.62, y: -36.936005}
-  m_SizeDelta: {x: 615.24, y: 73.87201}
+  m_AnchoredPosition: {x: 297.5, y: -32.399994}
+  m_SizeDelta: {x: 595, y: 64.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505271792
 MonoBehaviour:
@@ -24673,6 +24752,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 49906754}
   hotspotCountText: {fileID: 578318426}
+  presentationStyle: 0
   popupController: {fileID: 869402488}
 --- !u!114 &1521207706
 MonoBehaviour:
@@ -26338,6 +26418,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1200008577}
   hotspotCountText: {fileID: 1728332753}
+  presentationStyle: 0
   popupController: {fileID: 869402488}
 --- !u!114 &1606939673
 MonoBehaviour:
@@ -32183,6 +32264,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1470894375}
   hotspotCountText: {fileID: 888166045}
+  presentationStyle: 0
   popupController: {fileID: 869402488}
 --- !u!1 &1971212575
 GameObject:
@@ -33007,8 +33089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 928.86, y: -36.936005}
-  m_SizeDelta: {x: 615.24, y: 73.87201}
+  m_AnchoredPosition: {x: 898.5, y: -32.399994}
+  m_SizeDelta: {x: 595, y: 64.79999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994645915
 MonoBehaviour:
@@ -33384,6 +33466,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 479182968}
   hotspotCountText: {fileID: 1907005276}
+  presentationStyle: 0
   popupController: {fileID: 869402488}
 --- !u!114 &2006140145
 MonoBehaviour:
@@ -35435,7 +35518,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 923.03}
+  m_SizeDelta: {x: 0, y: 955.16}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2107355503
 MonoBehaviour:
@@ -36027,6 +36110,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1734650815}
   hotspotCountText: {fileID: 1887051528}
+  presentationStyle: 0
   popupController: {fileID: 869402488}
 --- !u!114 &2124058397
 MonoBehaviour:

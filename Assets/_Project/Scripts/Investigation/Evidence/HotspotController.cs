@@ -2,6 +2,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum EvidencePresentationStyle
+{
+    None,
+    MuseumDisplay,
+    SecurityConsole,
+    OfficeWorkstation,
+    PhysicalDocument
+}
+
 [System.Serializable]
 public class EvidenceDocumentData
 {
@@ -101,6 +110,11 @@ public class HotspotController : MonoBehaviour
     [SerializeField] private TMP_Text hotspotNameText;
     [SerializeField] private TMP_Text hotspotCountText;
 
+    [Header("Evidence Presentation")]
+    [SerializeField]
+    private EvidencePresentationStyle presentationStyle =
+        EvidencePresentationStyle.None;
+
     [Header("System Reference")]
     [SerializeField]
     private EvidencePopupController popupController;
@@ -169,7 +183,8 @@ public class HotspotController : MonoBehaviour
             evidenceLocation,
             evidenceLocationIndonesian,
             document1,
-            document2
+            document2,
+            presentationStyle
         );
     }
 

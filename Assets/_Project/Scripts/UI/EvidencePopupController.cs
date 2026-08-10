@@ -7,6 +7,9 @@ public class EvidencePopupController : MonoBehaviour
     [Header("Popup Root")]
     [SerializeField] private GameObject evidencePopup;
 
+    [Header("Presentation Skins")]
+    [SerializeField] private GameObject museumDisplaySkin;
+
     [Header("Popup Text")]
     [SerializeField] private TMP_Text evidenceTitleText;
     [SerializeField] private TMP_Text evidenceMetaText;
@@ -86,7 +89,8 @@ public class EvidencePopupController : MonoBehaviour
         string locationEnglish,
         string locationIndonesian,
         EvidenceDocumentData firstDocument,
-        EvidenceDocumentData secondDocument
+        EvidenceDocumentData secondDocument,
+        EvidencePresentationStyle presentationStyle
     )
     {
         if (evidencePopup == null)
@@ -118,13 +122,10 @@ public class EvidencePopupController : MonoBehaviour
         document1 = firstDocument;
         document2 = secondDocument;
 
-        // Siapkan seluruh isi dan warna tab terlebih dahulu
-        // ketika popup masih belum terlihat.
-        ShowDocument(0);
+        ApplyPresentationStyle(presentationStyle);
 
-        // Setelah tampilannya siap, aktifkan popup.
-        // PopupOpenTransition akan langsung menjalankan animasi.
         evidencePopup.SetActive(true);
+        ShowDocument(0);
     }
 
     public void CloseEvidence()
@@ -132,6 +133,33 @@ public class EvidencePopupController : MonoBehaviour
         if (evidencePopup != null)
         {
             evidencePopup.SetActive(false);
+        }
+    }
+
+    private void ApplyPresentationStyle(
+        EvidencePresentationStyle presentationStyle
+    )
+    {
+        if (museumDisplaySkin != null)
+        {
+            bool shouldShowMuseumDisplay =
+                presentationStyle ==
+                EvidencePresentationStyle.MuseumDisplay;
+
+            museumDisplaySkin.SetActive(
+                shouldShowMuseumDisplay
+            );
+        }
+        else if (
+            presentationStyle ==
+            EvidencePresentationStyle.MuseumDisplay
+        )
+        {
+            Debug.LogWarning(
+                "EvidencePopupController: Museum Display Skin " +
+                "belum dihubungkan di Inspector.",
+                this
+            );
         }
     }
 
