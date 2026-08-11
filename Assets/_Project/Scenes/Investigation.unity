@@ -772,7 +772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MAINTENANCE TERMINAL
+  m_text: MAINTENANCE DOCUMENT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 535571082}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.39394444
+  m_Size: 0.39731565
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7963,7 +7963,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1638809767}
   hotspotCountText: {fileID: 640281124}
-  presentationStyle: 0
+  presentationStyle: 4
   popupController: {fileID: 869402488}
 --- !u!114 &457077356
 MonoBehaviour:
@@ -8929,6 +8929,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523904161}
   m_CullTransparentMesh: 1
+--- !u!1 &531621267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531621268}
+  - component: {fileID: 531621270}
+  - component: {fileID: 531621269}
+  m_Layer: 5
+  m_Name: Skin_OfficeWorkstation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &531621268
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531621267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 964609348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 1620, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &531621269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531621267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3dfb23731bcb430428ce17ca6b6c89e0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &531621270
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531621267}
+  m_CullTransparentMesh: 1
 --- !u!1 &535571081
 GameObject:
   m_ObjectHideFlags: 0
@@ -8961,7 +9036,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1459163916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.60605556}
+  m_AnchorMin: {x: 0, y: 0.6026844}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -12769,6 +12844,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821229140}
   m_CullTransparentMesh: 1
+--- !u!1 &821831985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821831986}
+  - component: {fileID: 821831988}
+  - component: {fileID: 821831987}
+  m_Layer: 5
+  m_Name: Skin_PhysicalDocument
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &821831986
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821831985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 964609348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 1620, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &821831987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821831985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a755a39ef4b45d24ea2fcde8df41f6b3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &821831988
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821831985}
+  m_CullTransparentMesh: 1
 --- !u!1 &847859812
 GameObject:
   m_ObjectHideFlags: 0
@@ -12966,6 +13116,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EvidencePopupController
   evidencePopup: {fileID: 1457785380}
   museumDisplaySkin: {fileID: 1114167584}
+  securityConsoleSkin: {fileID: 1344546073}
+  officeWorkstationSkin: {fileID: 531621267}
+  physicalDocumentSkin: {fileID: 821831985}
+  evidenceCardImage: {fileID: 964609349}
+  evidenceHeaderImage: {fileID: 1477141752}
+  evidenceTabBarImage: {fileID: 142984970}
+  evidenceScrollViewImage: {fileID: 488791569}
+  scrollbarTrackImage: {fileID: 109589978}
+  scrollbarHandleImage: {fileID: 535571083}
   evidenceTitleText: {fileID: 498791881}
   evidenceMetaText: {fileID: 308747181}
   evidenceBodyText: {fileID: 1429478010}
@@ -14779,12 +14938,15 @@ RectTransform:
   - {fileID: 142984968}
   - {fileID: 488791567}
   - {fileID: 1114167585}
+  - {fileID: 1344546074}
+  - {fileID: 531621268}
+  - {fileID: 821831986}
   m_Father: {fileID: 1457785381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1300, y: 720}
+  m_SizeDelta: {x: 1300, y: 725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964609349
 MonoBehaviour:
@@ -16750,7 +16912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1114167585
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21293,6 +21455,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1344546073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344546074}
+  - component: {fileID: 1344546076}
+  - component: {fileID: 1344546075}
+  m_Layer: 5
+  m_Name: Skin_SecurityConsole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1344546074
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344546073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 964609348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 1620, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1344546075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344546073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9e5ad4b362c382f41b2f41233227d529, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1344546076
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344546073}
+  m_CullTransparentMesh: 1
 --- !u!1 &1362836129
 GameObject:
   m_ObjectHideFlags: 0
@@ -24218,8 +24455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 297.5, y: -32.399994}
-  m_SizeDelta: {x: 595, y: 64.79999}
+  m_AnchoredPosition: {x: 297.5, y: -32.624985}
+  m_SizeDelta: {x: 595, y: 65.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505271792
 MonoBehaviour:
@@ -24746,13 +24983,13 @@ MonoBehaviour:
       alat referensi dikembalikan \u201Csebelum 20:18.\u201D\r\n\u2022 Pemindaian
       pengembalian fisik terjadi pada pukul 20:27.\r\n\r\nSTATUS RANTAI PENYIMPANAN:
       LENGKAP"
-  hotspotName: MAINTENANCE TERMINAL
+  hotspotName: MAINTENANCE DOCUMENT
   hotspotContentSummary: 2 DOCUMENTS
-  hotspotNameIndonesian: TERMINAL PEMELIHARAAN
+  hotspotNameIndonesian: DOKUMEN  PEMELIHARAAN
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 49906754}
   hotspotCountText: {fileID: 578318426}
-  presentationStyle: 0
+  presentationStyle: 4
   popupController: {fileID: 869402488}
 --- !u!114 &1521207706
 MonoBehaviour:
@@ -26418,7 +26655,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1200008577}
   hotspotCountText: {fileID: 1728332753}
-  presentationStyle: 0
+  presentationStyle: 3
   popupController: {fileID: 869402488}
 --- !u!114 &1606939673
 MonoBehaviour:
@@ -32264,7 +32501,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1470894375}
   hotspotCountText: {fileID: 888166045}
-  presentationStyle: 0
+  presentationStyle: 2
   popupController: {fileID: 869402488}
 --- !u!1 &1971212575
 GameObject:
@@ -33089,8 +33326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 898.5, y: -32.399994}
-  m_SizeDelta: {x: 595, y: 64.79999}
+  m_AnchoredPosition: {x: 898.5, y: -32.624985}
+  m_SizeDelta: {x: 595, y: 65.24997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994645915
 MonoBehaviour:
@@ -33466,7 +33703,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 479182968}
   hotspotCountText: {fileID: 1907005276}
-  presentationStyle: 0
+  presentationStyle: 2
   popupController: {fileID: 869402488}
 --- !u!114 &2006140145
 MonoBehaviour:
@@ -36110,7 +36347,7 @@ MonoBehaviour:
   hotspotContentSummaryIndonesian: 2 DOKUMEN
   hotspotNameText: {fileID: 1734650815}
   hotspotCountText: {fileID: 1887051528}
-  presentationStyle: 0
+  presentationStyle: 3
   popupController: {fileID: 869402488}
 --- !u!114 &2124058397
 MonoBehaviour:
