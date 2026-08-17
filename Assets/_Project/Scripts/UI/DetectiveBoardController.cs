@@ -327,28 +327,21 @@ public class DetectiveBoardController : MonoBehaviour
             ? "TEORI TERPILIH"
             : "SELECTED THEORY";
 
-        if (selectionComplete)
-        {
-            selectionSummary.text =
-                "<b>" + heading + "</b>\n" +
-                suspectName + " — " + locationName;
-        }
-        else
-        {
-            string suspectLabel = IsIndonesian
-                ? "Tersangka: "
-                : "Suspect: ";
+        string suspectLabel = IsIndonesian
+            ? "TERSANGKA: "
+            : "SUSPECT: ";
 
-            string locationLabel = IsIndonesian
-                ? "Lokasi: "
-                : "Location: ";
+        string locationLabel = IsIndonesian
+            ? "LOKASI: "
+            : "LOCATION: ";
 
-            selectionSummary.text =
-                "<b>" + heading + "</b>\n" +
-                suspectLabel + suspectName +
-                "    |    " +
-                locationLabel + locationName;
-        }
+        selectionSummary.text =
+            "<color=#D2A94F><b>" + heading + "</b></color>\n" +
+            "<color=#91A7B4>" + suspectLabel + "</color>" +
+            "<color=#E7EDF1><b>" + suspectName + "</b></color>" +
+            "    <color=#4C6675>|</color>    " +
+            "<color=#91A7B4>" + locationLabel + "</color>" +
+            "<color=#E7EDF1><b>" + locationName + "</b></color>";
     }
 
     public void OpenBoard()
