@@ -3856,10 +3856,10 @@ RectTransform:
   - {fileID: 57905815}
   m_Father: {fileID: 347503101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150.6, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189705507
 MonoBehaviour:
@@ -5200,7 +5200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 01   WHO STOLE THE ROYAL SAPPHIRE?
+  m_text: 01   WHO STOLE THE REAL ROYAL SAPPHIRE?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14670,10 +14670,10 @@ RectTransform:
   - {fileID: 1988670622}
   m_Father: {fileID: 347503101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1419.4, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772564833
 MonoBehaviour:
@@ -15181,7 +15181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &793507133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18715,10 +18715,10 @@ RectTransform:
   - {fileID: 729580833}
   m_Father: {fileID: 1821920195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 785, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058472002
 MonoBehaviour:
@@ -21650,10 +21650,10 @@ RectTransform:
   - {fileID: 2073528825}
   m_Father: {fileID: 1821920195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1419.4, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188217484
 MonoBehaviour:
@@ -22704,10 +22704,10 @@ RectTransform:
   - {fileID: 1325735806}
   m_Father: {fileID: 1821920195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150.6, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220412374
 MonoBehaviour:
@@ -27471,10 +27471,10 @@ RectTransform:
   - {fileID: 1362836130}
   m_Father: {fileID: 1821920195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1102.2001, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427997061
 MonoBehaviour:
@@ -30321,10 +30321,10 @@ RectTransform:
   - {fileID: 1273140512}
   m_Father: {fileID: 347503101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 467.80002, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550233194
 MonoBehaviour:
@@ -34969,10 +34969,10 @@ RectTransform:
   - {fileID: 487785056}
   m_Father: {fileID: 347503101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1102.2001, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769787481
 MonoBehaviour:
@@ -39455,7 +39455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 02   WHERE IS THE ROYAL SAPPHIRE HIDDEN?
+  m_text: 02   WHERE IS THE REAL ROYAL SAPPHIRE HIDDEN?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -41334,10 +41334,10 @@ RectTransform:
   - {fileID: 158823386}
   m_Father: {fileID: 347503101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 785, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042222668
 MonoBehaviour:
@@ -42464,10 +42464,10 @@ RectTransform:
   - {fileID: 274778403}
   m_Father: {fileID: 1821920195}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 467.80002, y: -110}
+  m_SizeDelta: {x: 301.2, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081517781
 MonoBehaviour:
