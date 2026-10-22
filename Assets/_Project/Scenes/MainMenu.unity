@@ -766,8 +766,9 @@ MonoBehaviour:
     Use the Museum Map to move between investigation rooms.\r\n\r\n\u2022 Compare
     evidence, timelines, and suspect statements.\r\n\r\n\u2022 Open the Character
     File to review each suspect\u2019s role and access.\r\n\r\n\u2022 Use the Detective
-    Board to select the culprit and hiding location.\r\n\r\n\u2022 You have 10 minutes
-    and only one final submission."
+    Board to select who stole the original Royal Sapphire and where the artifact
+    is currently located.\r\n\r\n\u2022 You have up to two attempts to submit your
+    answers through the Detective Board."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -863,15 +864,16 @@ MonoBehaviour:
     Use the Museum Map to move between investigation rooms.\r\n\r\n\u2022 Compare
     evidence, timelines, and suspect statements.\r\n\r\n\u2022 Open the Character
     File to review each suspect\u2019s role and access.\r\n\r\n\u2022 Use the Detective
-    Board to select the culprit and hiding location.\r\n\r\n\u2022 You have 10 minutes
-    and only one final submission."
+    Board to select who stole the original Royal Sapphire and where the artifact
+    is currently located.\r\n\r\n\u2022 You have up to two attempts to submit your
+    answers through the Detective Board."
   indonesianText: "\u2022 Klik objek investigasi untuk memeriksa bukti.\r\n\r\n\u2022
     Gunakan Peta Museum untuk berpindah antar-ruangan investigasi.\r\n\r\n\u2022
     Bandingkan bukti, urutan waktu, dan pernyataan para tersangka.\r\n\r\n\u2022
     Buka File Karakter untuk memeriksa peran dan akses setiap tersangka.\r\n\r\n\u2022
-    Gunakan Papan Detektif untuk memilih pelaku dan lokasi persembunyian.\r\n\r\n\u2022
-    Kalian memiliki waktu 10 menit dan hanya satu kesempatan untuk mengirim jawaban
-    akhir."
+    Gunakan Papan Detektif untuk menentukan siapa yang mencuri Royal Sapphire asli
+    dan di mana artefak tersebut berada saat ini.\r\n\r\n\u2022 Kalian memiliki maksimal
+    dua kesempatan untuk mengirim jawaban melalui Papan Detektif."
 --- !u!1 &473358905
 GameObject:
   m_ObjectHideFlags: 0

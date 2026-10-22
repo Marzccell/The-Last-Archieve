@@ -471,10 +471,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2022 You have 10 minutes to complete the investigation.\r\n\r\n\u2022
-    All evidence is available from the beginning.\r\n\r\n\u2022 Discuss freely with
-    your teammates and compare clues.\r\n\r\n\u2022 You may submit only one final
-    answer.\r\n\r\n\u2022 An incorrect submission or expired timer will end the case."
+  m_text: "\u2022 All evidence is available from the beginning.\r\n\r\n\u2022 Discuss
+    freely with your teammates and compare clues.\r\n\r\n\u2022 You have up to two
+    attempts to submit your answers through the Detective Board.\r\n\r\n\u2022 To
+    solve the case, you must correctly identify both the thief of the original Royal
+    Sapphire and the artifact\u2019s current location."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -566,15 +567,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  englishText: "\u2022 You have 10 minutes to complete the investigation.\r\n\r\n\u2022
-    All evidence is available from the beginning.\r\n\r\n\u2022 Discuss freely with
-    your teammates and compare clues.\r\n\r\n\u2022 You may submit only one final
-    answer.\r\n\r\n\u2022 An incorrect submission or expired timer will end the case."
-  indonesianText: "\u2022 Kalian memiliki waktu 10 menit untuk menyelesaikan investigasi.\r\n\r\n\u2022
-    Semua bukti tersedia sejak awal.\r\n\r\n\u2022 Berdiskusilah dengan rekan satu
-    tim dan bandingkan setiap petunjuk.\r\n\r\n\u2022 Kalian hanya dapat mengirim
-    satu jawaban akhir.\r\n\r\n\u2022 Jawaban yang salah atau waktu yang habis akan
-    mengakhiri kasus."
+  englishText: "\u2022 All evidence is available from the beginning.\r\n\r\n\u2022
+    Discuss freely with your teammates and compare clues.\r\n\r\n\u2022 You have
+    up to two attempts to submit your answers through the Detective Board.\r\n\r\n\u2022
+    To solve the case, you must correctly identify both the thief of the original
+    Royal Sapphire and the artifact\u2019s current location."
+  indonesianText: "\u2022 Semua bukti tersedia sejak awal.\r\n\r\n\u2022 Berdiskusilah
+    dengan rekan satu tim dan bandingkan setiap petunjuk.\r\n\r\n\u2022 Kalian memiliki
+    maksimal dua kesempatan untuk mengirim jawaban melalui Papan Detektif.\r\n\r\n\u2022
+    Untuk memecahkan kasus, kalian harus menentukan dengan benar siapa yang mencuri
+    Royal Sapphire asli dan di mana artefak tersebut berada saat ini."
 --- !u!1 &316672264
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,30 +914,30 @@ MonoBehaviour:
     TR-17 inside the Royal Sapphire display.
 
 
-    
-
-    Five staff members were
-    present during the previous night''s maintenance.
 
 
-    
+    Five staff members were present
+    during the previous night''s maintenance.
 
-    Multiple records
-    have been altered or contradicted.'
+
+
+
+    Multiple records have been
+    altered or contradicted.'
   indonesianText: 'Pada pukul 08.00, pemindai keaslian museum menemukan Replika Latihan
     TR-17 di dalam etalase Royal Sapphire.
 
 
-    
-
-    Lima anggota staf hadir
-    selama pemeliharaan pada malam sebelumnya.
 
 
-    
+    Lima anggota staf hadir selama
+    pemeliharaan pada malam sebelumnya.
 
-    Beberapa catatan telah
-    diubah atau saling bertentangan.'
+
+
+
+    Beberapa catatan telah diubah atau
+    saling bertentangan.'
 --- !u!1 &617003207
 GameObject:
   m_ObjectHideFlags: 0

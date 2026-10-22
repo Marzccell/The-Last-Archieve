@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This action cannot be undone. The timer will stop immediately.
+  m_text: This submission will use one attempt. Review both answers before confirming.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1139,8 +1139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  englishText: This action cannot be undone. The timer will stop immediately.
-  indonesianText: Tindakan ini tidak dapat dibatalkan. Timer akan langsung berhenti.
+  englishText: This submission will use one attempt. Review both answers before confirming.
+  indonesianText: Pengiriman ini akan menggunakan satu kesempatan. Periksa kembali
+    kedua jawaban sebelum mengonfirmasi.
 --- !u!1 &57905814
 GameObject:
   m_ObjectHideFlags: 0
@@ -6268,82 +6269,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324772872}
-  m_CullTransparentMesh: 1
---- !u!1 &327608565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 327608566}
-  - component: {fileID: 327608568}
-  - component: {fileID: 327608567}
-  m_Layer: 5
-  m_Name: TimeUpPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &327608566
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327608565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1115785953}
-  m_Father: {fileID: 1075230223}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &327608567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327608565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.023529412, g: 0.047058824, b: 0.08627451, a: 0.8627451}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &327608568
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327608565}
   m_CullTransparentMesh: 1
 --- !u!1 &333421171
 GameObject:
@@ -15554,7 +15479,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869402487}
-  - component: {fileID: 869402486}
   - component: {fileID: 869402488}
   - component: {fileID: 869402489}
   - component: {fileID: 869402490}
@@ -15568,24 +15492,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &869402486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869402485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95340e2de1bcc8449a50bd411ad7b148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CountdownTimer
-  startingTimeSeconds: 600
-  warningTimeSeconds: 60
-  timerText: {fileID: 997786563}
-  timeUpPanel: {fileID: 327608565}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  warningColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &869402487
 Transform:
   m_ObjectHideFlags: 0
@@ -15694,7 +15600,6 @@ MonoBehaviour:
   successReturnToMenuButton: {fileID: 885531648}
   incorrectReturnToMenuButton: {fileID: 1001900510}
   mainMenuSceneName: MainMenu
-  countdownTimer: {fileID: 869402486}
   closeBoardButton: {fileID: 249393953}
 --- !u!114 &869402491
 MonoBehaviour:
@@ -15749,158 +15654,6 @@ MonoBehaviour:
   ethanSelectionBar: {fileID: 2059869007}
   lucasSelectionBar: {fileID: 691704169}
   graceSelectionBar: {fileID: 897391792}
---- !u!1 &871644768
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 871644769}
-  - component: {fileID: 871644771}
-  - component: {fileID: 871644770}
-  - component: {fileID: 871644772}
-  m_Layer: 5
-  m_Name: TimeUpTitle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &871644769
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871644768}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1115785953}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.08, y: 0.62}
-  m_AnchorMax: {x: 0.92, y: 0.88}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &871644770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871644768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: TIME'S UP
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4285182936
-  m_fontColor: {r: 0.84705883, g: 0.7019608, b: 0.41568628, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &871644771
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871644768}
-  m_CullTransparentMesh: 1
---- !u!114 &871644772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871644768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  englishText: TIME'S UP
-  indonesianText: WAKTU HABIS
 --- !u!1 &874242401
 GameObject:
   m_ObjectHideFlags: 0
@@ -17710,143 +17463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966485112}
   m_CullTransparentMesh: 1
---- !u!1 &997786561
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 997786562}
-  - component: {fileID: 997786564}
-  - component: {fileID: 997786563}
-  m_Layer: 5
-  m_Name: TimerText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &997786562
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997786561}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1526620043}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.86, y: 0.92}
-  m_AnchorMax: {x: 0.98, y: 0.98}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &997786563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997786561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 10:00
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4292010472
-  m_fontColor: {r: 0.9098039, g: 0.88235295, b: 0.8235294, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &997786564
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997786561}
-  m_CullTransparentMesh: 1
 --- !u!1 &1001900508
 GameObject:
   m_ObjectHideFlags: 0
@@ -19295,7 +18911,6 @@ RectTransform:
   - {fileID: 223608724}
   - {fileID: 793507133}
   - {fileID: 1476389088}
-  - {fileID: 327608566}
   - {fileID: 92791867}
   - {fileID: 172790789}
   m_Father: {fileID: 0}
@@ -20210,83 +19825,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115422369}
-  m_CullTransparentMesh: 1
---- !u!1 &1115785952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1115785953}
-  - component: {fileID: 1115785955}
-  - component: {fileID: 1115785954}
-  m_Layer: 5
-  m_Name: TimeUpCard
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1115785953
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115785952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 871644769}
-  - {fileID: 1407783789}
-  m_Father: {fileID: 327608566}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.31, y: 0.33}
-  m_AnchorMax: {x: 0.69, y: 0.67}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1115785954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115785952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.06666667, g: 0.105882354, b: 0.16470589, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1115785955
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115785952}
   m_CullTransparentMesh: 1
 --- !u!1 &1120475917
 GameObject:
@@ -24338,15 +23876,15 @@ MonoBehaviour:
     occurred within the same time window. The available records contain contradictions,
     incomplete actions, and entries that may not match what physically happened.\r\n\r\n\r\n<color=#E7C77A><b>PRIMARY
     OBJECTIVE</b></color>\r\n\r\nDetermine:\r\n\r\n1. WHO removed the original Royal
-    Sapphire.\r\n2. WHERE the original Royal Sapphire is currently hidden.\r\n\r\nSubmit
-    both conclusions through the Detective Board before the investigation timer expires.\r\n\r\n\r\n<color=#E7C77A><b>KNOWN
+    Sapphire.\r\n2. WHERE the original Royal Sapphire is currently located.\r\n\r\nSubmit
+    both conclusions through the Detective Board.\r\n\r\n\r\n<color=#E7C77A><b>KNOWN
     CONDITIONS</b></color>\r\n\r\n\u2022 The museum closed to the public at 20:00.\r\n\u2022
     The display shows no evidence of forced entry.\r\n\u2022 Multiple staff credentials
     were used during the incident window.\r\n\u2022 Maintenance, security, replica
     handling, and dispatch operations overlapped.\r\n\u2022 Several registered objects
     have similar or identical weights.\r\n\u2022 A digital record does not always
     confirm that a physical action occurred.\r\n\r\n\r\n<color=#E7C77A><b>POSSIBLE
-    HIDING LOCATIONS</b></color>\r\n\r\n\u2022 Archive Shelf A-17\r\n\u2022 Replica
+    ARTIFACT LOCATIONS</b></color>\r\n\r\n\u2022 Archive Shelf A-17\r\n\u2022 Replica
     Cabinet C-02\r\n\u2022 Technician Tool Case M-04\r\n\u2022 Outgoing Restoration
     Crate C-07\r\n\r\n\r\n<color=#E7C77A><b>INVESTIGATION PROTOCOL</b></color>\r\n\r\n\u2022
     Examine all available evidence documents.\r\n\u2022 Compare timestamps, credential
@@ -24354,8 +23892,9 @@ MonoBehaviour:
     events from database entries and automated logs.\r\n\u2022 Do not identify an
     object using weight alone.\r\n\u2022 Character access indicates opportunity,
     not guilt.\r\n\u2022 Suspect statements may contain omissions, accusations, or
-    misleading claims.\r\n\u2022 The team receives only one final submission.\r\n\r\n<color=#8FA9BE>Cross-reference
-    the evidence. No single document reveals the complete sequence.</color>"
+    misleading claims.\r\n\u2022 The team has up to two attempts to submit its answers
+    through the Detective Board.\r\n\r\n<color=#8FA9BE>Cross-reference the evidence.
+    No single document reveals the complete sequence.</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24447,31 +23986,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  englishText: "<color=#E7C77A><b>CASE 07 \u2014 THE ROYAL SAPPHIRE</b></color>\n<color=#8FA9BE>STATUS:
-    ACTIVE INVESTIGATION</color>\n\nThe Royal Sapphire, registry code RS-01, has
-    disappeared from its secured display inside the National History Museum.\n\nThe
+  englishText: "<color=#E7C77A><b>CASE 07 \u2014 THE ROYAL SAPPHIRE</b></color>\r\n<color=#8FA9BE>STATUS:
+    ACTIVE INVESTIGATION</color>\r\n\r\nThe Royal Sapphire, registry code RS-01,
+    has disappeared from its secured display inside the National History Museum.\r\n\r\nThe
     display system recorded no forced entry or physical damage. During the closing
     period, several authorized maintenance, security, collection, and dispatch activities
     occurred within the same time window. The available records contain contradictions,
-    incomplete actions, and entries that may not match what physically happened.\n\n\n<color=#E7C77A><b>PRIMARY
-    OBJECTIVE</b></color>\n\nDetermine:\n\n1. WHO removed the original Royal Sapphire.\n2.
-    WHERE the original Royal Sapphire is currently hidden.\n\nSubmit both conclusions
-    through the Detective Board before the investigation timer expires.\n\n\n<color=#E7C77A><b>KNOWN
-    CONDITIONS</b></color>\n\n\u2022 The museum closed to the public at 20:00.\n\u2022
-    The display shows no evidence of forced entry.\n\u2022 Multiple staff credentials
-    were used during the incident window.\n\u2022 Maintenance, security, replica
-    handling, and dispatch operations overlapped.\n\u2022 Several registered objects
-    have similar or identical weights.\n\u2022 A digital record does not always confirm
-    that a physical action occurred.\n\n\n<color=#E7C77A><b>POSSIBLE HIDING LOCATIONS</b></color>\n\n\u2022
-    Archive Shelf A-17\n\u2022 Replica Cabinet C-02\n\u2022 Technician Tool Case
-    M-04\n\u2022 Outgoing Restoration Crate C-07\n\n\n<color=#E7C77A><b>INVESTIGATION
-    PROTOCOL</b></color>\n\n\u2022 Examine all available evidence documents.\n\u2022
-    Compare timestamps, credential IDs, physical access, and system authority.\n\u2022
-    Separate confirmed physical events from database entries and automated logs.\n\u2022
-    Do not identify an object using weight alone.\n\u2022 Character access indicates
-    opportunity, not guilt.\n\u2022 Suspect statements may contain omissions, accusations,
-    or misleading claims.\n\u2022 The team receives only one final submission.\n\n<color=#8FA9BE>Cross-reference
-    the evidence. No single document reveals the complete sequence.</color>"
+    incomplete actions, and entries that may not match what physically happened.\r\n\r\n\r\n<color=#E7C77A><b>PRIMARY
+    OBJECTIVE</b></color>\r\n\r\nDetermine:\r\n\r\n1. WHO removed the original Royal
+    Sapphire.\r\n2. WHERE the original Royal Sapphire is currently located.\r\n\r\nSubmit
+    both conclusions through the Detective Board.\r\n\r\n\r\n<color=#E7C77A><b>KNOWN
+    CONDITIONS</b></color>\r\n\r\n\u2022 The museum closed to the public at 20:00.\r\n\u2022
+    The display shows no evidence of forced entry.\r\n\u2022 Multiple staff credentials
+    were used during the incident window.\r\n\u2022 Maintenance, security, replica
+    handling, and dispatch operations overlapped.\r\n\u2022 Several registered objects
+    have similar or identical weights.\r\n\u2022 A digital record does not always
+    confirm that a physical action occurred.\r\n\r\n\r\n<color=#E7C77A><b>POSSIBLE
+    ARTIFACT LOCATIONS</b></color>\r\n\r\n\u2022 Archive Shelf A-17\r\n\u2022 Replica
+    Cabinet C-02\r\n\u2022 Technician Tool Case M-04\r\n\u2022 Outgoing Restoration
+    Crate C-07\r\n\r\n\r\n<color=#E7C77A><b>INVESTIGATION PROTOCOL</b></color>\r\n\r\n\u2022
+    Examine all available evidence documents.\r\n\u2022 Compare timestamps, credential
+    IDs, physical access, and system authority.\r\n\u2022 Separate confirmed physical
+    events from database entries and automated logs.\r\n\u2022 Do not identify an
+    object using weight alone.\r\n\u2022 Character access indicates opportunity,
+    not guilt.\r\n\u2022 Suspect statements may contain omissions, accusations, or
+    misleading claims.\r\n\u2022 The team has up to two attempts to submit its answers
+    through the Detective Board.\r\n\r\n<color=#8FA9BE>Cross-reference the evidence.
+    No single document reveals the complete sequence.</color>"
   indonesianText: "<color=#E7C77A><b>KASUS 07 \u2014 ROYAL SAPPHIRE</b></color>\r\n<color=#8FA9BE>STATUS:
     INVESTIGASI AKTIF</color>\r\n\r\nRoyal Sapphire, dengan kode registrasi RS-01,
     telah menghilang dari etalase amannya di Museum Sejarah Nasional.\r\n\r\nSistem
@@ -24480,25 +24021,24 @@ MonoBehaviour:
     resmi berlangsung dalam rentang waktu yang sama. Catatan yang tersedia mengandung
     pertentangan, tindakan yang tidak lengkap, dan entri yang mungkin tidak sesuai
     dengan kejadian sebenarnya.\r\n\r\n\r\n<color=#E7C77A><b>TUJUAN UTAMA</b></color>\r\n\r\nTentukan:\r\n\r\n1.
-    SIAPA yang mengambil Royal Sapphire asli.\r\n2. DI MANA Royal Sapphire asli saat
-    ini disembunyikan.\r\n\r\nKirim kedua kesimpulan melalui Papan Detektif sebelum
-    waktu investigasi habis.\r\n\r\n\r\n<color=#E7C77A><b>KONDISI YANG DIKETAHUI</b></color>\r\n\r\n\u2022
-    Museum ditutup untuk umum pada pukul 20.00.\r\n\u2022 Etalase tidak menunjukkan
-    tanda-tanda pembobolan.\r\n\u2022 Beberapa kredensial staf digunakan selama rentang
-    waktu kejadian.\r\n\u2022 Kegiatan pemeliharaan, keamanan, penanganan replika,
-    dan pengiriman berlangsung dalam waktu yang berdekatan.\r\n\u2022 Beberapa objek
-    yang terdaftar memiliki berat yang mirip atau sama.\r\n\u2022 Catatan digital
-    tidak selalu memastikan bahwa suatu tindakan fisik benar-benar terjadi.\r\n\r\n\r\n<color=#E7C77A><b>KEMUNGKINAN
-    LOKASI PERSEMBUNYIAN</b></color>\r\n\r\n\u2022 Rak Arsip A-17\r\n\u2022 Lemari
-    Replika C-02\r\n\u2022 Kotak Peralatan Teknisi M-04\r\n\u2022 Peti Restorasi
-    Keluar C-07\r\n\r\n\r\n<color=#E7C77A><b>PROTOKOL INVESTIGASI</b></color>\r\n\r\n\u2022
-    Periksa seluruh dokumen bukti yang tersedia.\r\n\u2022 Bandingkan waktu, ID kredensial,
-    akses fisik, dan wewenang sistem.\r\n\u2022 Pisahkan kejadian fisik yang terkonfirmasi
-    dari entri basis data dan log otomatis.\r\n\u2022 Jangan mengidentifikasi objek
-    hanya berdasarkan beratnya.\r\n\u2022 Akses karakter menunjukkan kesempatan,
-    bukan kesalahan.\r\n\u2022 Pernyataan tersangka dapat mengandung penghilangan
-    informasi, tuduhan, atau klaim yang menyesatkan.\r\n\u2022 Tim hanya memiliki
-    satu kesempatan untuk mengirim jawaban akhir.\r\n\r\n<color=#8FA9BE>Hubungkan
+    SIAPA yang mengambil Royal Sapphire asli.\r\n2. DI MANA Royal Sapphire asli berada
+    saat ini.\r\n\r\nKirim kedua kesimpulan melalui Papan Detektif.\r\n\r\n\r\n<color=#E7C77A><b>KONDISI
+    YANG DIKETAHUI</b></color>\r\n\r\n\u2022 Museum ditutup untuk umum pada pukul
+    20.00.\r\n\u2022 Etalase tidak menunjukkan tanda-tanda pembobolan.\r\n\u2022
+    Beberapa kredensial staf digunakan selama rentang waktu kejadian.\r\n\u2022 Kegiatan
+    pemeliharaan, keamanan, penanganan replika, dan pengiriman berlangsung dalam
+    waktu yang berdekatan.\r\n\u2022 Beberapa objek yang terdaftar memiliki berat
+    yang mirip atau sama.\r\n\u2022 Catatan digital tidak selalu memastikan bahwa
+    suatu tindakan fisik benar-benar terjadi.\r\n\r\n\r\n<color=#E7C77A><b>KEMUNGKINAN
+    LOKASI ARTEFAK</b></color>\r\n\r\n\u2022 Rak Arsip A-17\r\n\u2022 Lemari Replika
+    C-02\r\n\u2022 Kotak Peralatan Teknisi M-04\r\n\u2022 Peti Restorasi Keluar C-07\r\n\r\n\r\n<color=#E7C77A><b>PROTOKOL
+    INVESTIGASI</b></color>\r\n\r\n\u2022 Periksa seluruh dokumen bukti yang tersedia.\r\n\u2022
+    Bandingkan waktu, ID kredensial, akses fisik, dan wewenang sistem.\r\n\u2022
+    Pisahkan kejadian fisik yang terkonfirmasi dari entri basis data dan log otomatis.\r\n\u2022
+    Jangan mengidentifikasi objek hanya berdasarkan beratnya.\r\n\u2022 Akses karakter
+    menunjukkan kesempatan, bukan bukti bersalah.\r\n\u2022 Pernyataan tersangka
+    dapat mengandung penghilangan informasi, tuduhan, atau klaim yang menyesatkan.\r\n\u2022
+    Tim memiliki maksimal dua kesempatan untuk mengirim jawaban melalui Papan Detektif.\r\n\r\n<color=#8FA9BE>Hubungkan
     seluruh bukti. Tidak ada satu dokumen pun yang mengungkap rangkaian kejadian
     secara lengkap.</color>"
 --- !u!1 &1296791067
@@ -26903,173 +26443,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385455493}
   m_CullTransparentMesh: 1
---- !u!1 &1407783788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1407783789}
-  - component: {fileID: 1407783791}
-  - component: {fileID: 1407783790}
-  - component: {fileID: 1407783792}
-  m_Layer: 5
-  m_Name: TimeUpDescription
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1407783789
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407783788}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1115785953}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.2}
-  m_AnchorMax: {x: 0.9, y: 0.58}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1407783790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407783788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'The investigation window has ended.
-
-
-
-    Your team failed to submit
-    a final conclusion in time.'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294110955
-  m_fontColor: {r: 0.92156863, g: 0.93333334, b: 0.9490196, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1407783791
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407783788}
-  m_CullTransparentMesh: 1
---- !u!114 &1407783792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407783788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  englishText: 'The investigation window has ended.
-
-
-
-    Your team failed to submit
-    a final conclusion in time.'
-  indonesianText: 'Waktu investigasi telah berakhir.
-
-
-
-    Tim kalian gagal mengirimkan
-    kesimpulan akhir tepat waktu.'
 --- !u!1 &1408274384
 GameObject:
   m_ObjectHideFlags: 0
@@ -30059,7 +29432,6 @@ RectTransform:
   - {fileID: 684311233}
   - {fileID: 1477125440}
   - {fileID: 1277204335}
-  - {fileID: 997786562}
   - {fileID: 1604845445}
   - {fileID: 1374268925}
   m_Father: {fileID: 1075230223}

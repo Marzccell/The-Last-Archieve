@@ -44,9 +44,6 @@ public class DetectiveBoardController : MonoBehaviour
     [SerializeField] private Button incorrectReturnToMenuButton;
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
-    [Header("Timer")]
-    [SerializeField] private CountdownTimer countdownTimer;
-
     [Header("Buttons")]
     [SerializeField] private Button closeBoardButton;
 
@@ -107,12 +104,6 @@ public class DetectiveBoardController : MonoBehaviour
             incorrectReturnToMenuButton.onClick.AddListener(
                 ReturnToMainMenu
             );
-        }
-
-        if (countdownTimer != null)
-        {
-            countdownTimer.TimerExpired +=
-                HandleTimerExpired;
         }
 
         if (submissionConfirmationPanel != null)
@@ -182,11 +173,6 @@ public class DetectiveBoardController : MonoBehaviour
             );
         }
 
-        if (countdownTimer != null)
-        {
-            countdownTimer.TimerExpired -=
-                HandleTimerExpired;
-        }
     }
 
     private void SubscribeToCards(
@@ -349,12 +335,6 @@ public class DetectiveBoardController : MonoBehaviour
         if (submissionLocked)
             return;
 
-        if (countdownTimer != null &&
-            countdownTimer.HasExpired)
-        {
-            return;
-        }
-
         if (hamburgerDropdown != null)
             hamburgerDropdown.SetActive(false);
 
@@ -421,12 +401,6 @@ public class DetectiveBoardController : MonoBehaviour
         if (submissionLocked)
             return;
 
-        if (countdownTimer != null &&
-            countdownTimer.HasExpired)
-        {
-            return;
-        }
-
         RefreshSelection();
 
         if (selectedSuspect == null ||
@@ -448,9 +422,6 @@ public class DetectiveBoardController : MonoBehaviour
             reviewSubmissionButton.interactable =
                 false;
         }
-
-        if (countdownTimer != null)
-            countdownTimer.StopTimer();
 
         string submittedSuspectID =
             selectedSuspect.OptionID.Trim();
@@ -548,37 +519,6 @@ public class DetectiveBoardController : MonoBehaviour
                 selectedLocation.DisplayName
                     .ToUpperInvariant();
         }
-    }
-
-    private void HandleTimerExpired()
-    {
-        submissionLocked = true;
-
-        if (confirmSubmissionButton != null)
-        {
-            confirmSubmissionButton.interactable =
-                false;
-        }
-
-        if (reviewSubmissionButton != null)
-        {
-            reviewSubmissionButton.interactable =
-                false;
-        }
-
-        CloseConfirmation();
-
-        if (detectiveBoardPanel != null)
-            detectiveBoardPanel.SetActive(false);
-
-        if (hamburgerDropdown != null)
-            hamburgerDropdown.SetActive(false);
-
-        if (successResultPanel != null)
-            successResultPanel.SetActive(false);
-
-        if (incorrectResultPanel != null)
-            incorrectResultPanel.SetActive(false);
     }
 
     private void ReturnToMainMenu()
