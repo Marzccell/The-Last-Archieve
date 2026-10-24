@@ -27,6 +27,13 @@ public class DetectiveBoardController : MonoBehaviour
     [SerializeField] private Button cancelButton;
     [SerializeField] private Button confirmSubmissionButton;
 
+    [Header("Attempts")]
+    [SerializeField] private TMP_Text attemptsRemainingText;
+
+    [Header("Retry Feedback")]
+    [SerializeField] private GameObject retryFeedbackPanel;
+    [SerializeField] private Button continueInvestigationButton;
+
     [Header("Correct Answer")]
     [SerializeField] private string correctSuspectID = "olivia";
     [SerializeField] private string correctLocationID = "c07";
@@ -50,7 +57,22 @@ public class DetectiveBoardController : MonoBehaviour
     private DetectiveOptionCard selectedSuspect;
     private DetectiveOptionCard selectedLocation;
 
+    private const int MaximumAttempts = 2;
+
+    private int attemptsUsed;
+    private bool awaitingRetry;
+    private bool submissionInProgress;
     private bool submissionLocked;
+
+    public int AttemptsUsed => attemptsUsed;
+    public int AttemptsRemaining =>
+        Mathf.Max(0, MaximumAttempts - attemptsUsed);
+
+    private bool CanSubmit =>
+        !submissionLocked &&
+        !awaitingRetry &&
+        !submissionInProgress &&
+        AttemptsRemaining > 0;
 
     private bool IsIndonesian =>
         LanguageManager.Instance != null &&
@@ -59,6 +81,21 @@ public class DetectiveBoardController : MonoBehaviour
 
     private void Awake()
     {
+        attemptsUsed = 0;
+        awaitingRetry = false;
+        submissionInProgress = false;
+        submissionLocked = false;
+
+        if (continueInvestigationButton != null)
+        {
+            continueInvestigationButton.onClick.AddListener(
+                ContinueInvestigation
+            );
+        }
+
+        if (retryFeedbackPanel != null)
+            retryFeedbackPanel.SetActive(false);
+
         SubscribeToCards(suspectCards);
         SubscribeToCards(locationCards);
 
@@ -115,13 +152,18 @@ public class DetectiveBoardController : MonoBehaviour
         if (incorrectResultPanel != null)
             incorrectResultPanel.SetActive(false);
 
-        submissionLocked = false;
-
         RefreshSelection();
     }
 
     private void OnDestroy()
     {
+        if (continueInvestigationButton != null)
+        {
+            continueInvestigationButton.onClick.RemoveListener(
+                ContinueInvestigation
+            );
+        }
+
         UnsubscribeFromCards(suspectCards);
         UnsubscribeFromCards(locationCards);
 
@@ -172,7 +214,6 @@ public class DetectiveBoardController : MonoBehaviour
                 ReturnToMainMenu
             );
         }
-
     }
 
     private void SubscribeToCards(
@@ -258,7 +299,7 @@ public class DetectiveBoardController : MonoBehaviour
         bool selectionComplete =
             selectedSuspect != null &&
             selectedLocation != null &&
-            !submissionLocked;
+            CanSubmit;
 
         if (reviewSubmissionButton != null)
         {
@@ -270,6 +311,16 @@ public class DetectiveBoardController : MonoBehaviour
             selectedSuspect != null &&
             selectedLocation != null
         );
+
+        UpdateAttemptsDisplay();
+
+        if (confirmSubmissionButton != null)
+        {
+            confirmSubmissionButton.interactable =
+                selectionComplete &&
+                submissionConfirmationPanel != null &&
+                submissionConfirmationPanel.activeInHierarchy;
+        }
     }
 
     private DetectiveOptionCard FindSelectedCard(
@@ -330,9 +381,19 @@ public class DetectiveBoardController : MonoBehaviour
             "<color=#E7EDF1><b>" + locationName + "</b></color>";
     }
 
+    private void UpdateAttemptsDisplay()
+    {
+        if (attemptsRemainingText == null)
+            return;
+
+        attemptsRemainingText.text = IsIndonesian
+            ? $"SISA KESEMPATAN: {AttemptsRemaining}/{MaximumAttempts}"
+            : $"ATTEMPTS REMAINING: {AttemptsRemaining}/{MaximumAttempts}";
+    }
+
     public void OpenBoard()
     {
-        if (submissionLocked)
+        if (!CanSubmit)
             return;
 
         if (hamburgerDropdown != null)
@@ -354,7 +415,7 @@ public class DetectiveBoardController : MonoBehaviour
 
     private void ReviewSubmission()
     {
-        if (submissionLocked)
+        if (!CanSubmit)
             return;
 
         RefreshSelection();
@@ -384,10 +445,15 @@ public class DetectiveBoardController : MonoBehaviour
             submissionConfirmationPanel.transform
                 .SetAsLastSibling();
         }
+
+        RefreshSelection();
     }
 
     private void CloseConfirmation()
     {
+        if (confirmSubmissionButton != null)
+            confirmSubmissionButton.interactable = false;
+
         if (submissionConfirmationPanel != null)
         {
             submissionConfirmationPanel.SetActive(
@@ -398,30 +464,31 @@ public class DetectiveBoardController : MonoBehaviour
 
     private void ConfirmSubmission()
     {
-        if (submissionLocked)
+        if (!CanSubmit ||
+            submissionConfirmationPanel == null ||
+            !submissionConfirmationPanel.activeInHierarchy)
+        {
             return;
+        }
 
         RefreshSelection();
 
-        if (selectedSuspect == null ||
-            selectedLocation == null)
+        if (selectedSuspect == null || selectedLocation == null)
+            return;
+
+        if (retryFeedbackPanel == null ||
+            continueInvestigationButton == null)
         {
+            Debug.LogError(
+                "DetectiveBoardController: Retry Feedback Panel dan " +
+                "Continue Investigation Button harus dihubungkan.",
+                this
+            );
             return;
         }
 
-        submissionLocked = true;
-
-        if (confirmSubmissionButton != null)
-        {
-            confirmSubmissionButton.interactable =
-                false;
-        }
-
-        if (reviewSubmissionButton != null)
-        {
-            reviewSubmissionButton.interactable =
-                false;
-        }
+        submissionInProgress = true;
+        RefreshSelection();
 
         string submittedSuspectID =
             selectedSuspect.OptionID.Trim();
@@ -441,16 +508,14 @@ public class DetectiveBoardController : MonoBehaviour
             StringComparison.OrdinalIgnoreCase
         );
 
-        bool answerCorrect =
-            suspectCorrect && locationCorrect;
+        bool answerCorrect = suspectCorrect && locationCorrect;
+
+        attemptsUsed++;
 
         Debug.Log(
-            "FINAL SUBMISSION: " +
-            submittedSuspectID +
-            " / " +
-            submittedLocationID +
-            " | Correct: " +
-            answerCorrect
+            $"SUBMISSION {attemptsUsed}/{MaximumAttempts}: " +
+            submittedSuspectID + " / " + submittedLocationID +
+            " | Correct: " + answerCorrect
         );
 
         CloseConfirmation();
@@ -459,9 +524,52 @@ public class DetectiveBoardController : MonoBehaviour
             detectiveBoardPanel.SetActive(false);
 
         if (answerCorrect)
+        {
+            submissionLocked = true;
             ShowSuccessResult();
+        }
+        else if (AttemptsRemaining > 0)
+        {
+            awaitingRetry = true;
+            ShowRetryFeedback();
+        }
         else
+        {
+            submissionLocked = true;
             ShowIncorrectResult();
+        }
+
+        submissionInProgress = false;
+        RefreshSelection();
+    }
+
+    private void ShowRetryFeedback()
+    {
+        if (successResultPanel != null)
+            successResultPanel.SetActive(false);
+
+        if (incorrectResultPanel != null)
+            incorrectResultPanel.SetActive(false);
+
+        retryFeedbackPanel.transform.SetAsLastSibling();
+        retryFeedbackPanel.SetActive(true);
+    }
+
+    private void ContinueInvestigation()
+    {
+        if (!awaitingRetry ||
+            submissionLocked ||
+            submissionInProgress)
+        {
+            return;
+        }
+
+        awaitingRetry = false;
+
+        if (retryFeedbackPanel != null)
+            retryFeedbackPanel.SetActive(false);
+
+        RefreshSelection();
     }
 
     private void ShowSuccessResult()
