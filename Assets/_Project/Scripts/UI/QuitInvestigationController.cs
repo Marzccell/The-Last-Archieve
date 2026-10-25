@@ -13,9 +13,13 @@ public class QuitInvestigationController : MonoBehaviour
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
     private bool isReturningToMenu;
+    private DetectiveBoardController detectiveBoardController;
 
     private void Awake()
     {
+        // Both controllers are on GameSystems in the Investigation scene.
+        detectiveBoardController = GetComponent<DetectiveBoardController>();
+
         if (quitConfirmationPanel != null)
         {
             quitConfirmationPanel.SetActive(false);
@@ -64,6 +68,19 @@ public class QuitInvestigationController : MonoBehaviour
         {
             return;
         }
+
+        if (detectiveBoardController == null)
+        {
+            Debug.LogError(
+                "QuitInvestigationController: DetectiveBoardController " +
+                "harus berada pada GameObject yang sama agar poin Quit tercatat.",
+                this
+            );
+            return;
+        }
+
+        if (!detectiveBoardController.RecordQuit())
+            return;
 
         isReturningToMenu = true;
         SceneManager.LoadScene(mainMenuSceneName);

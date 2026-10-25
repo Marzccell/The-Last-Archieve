@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -34,6 +35,16 @@ public class DetectiveBoardController : MonoBehaviour
     [SerializeField] private GameObject retryFeedbackPanel;
     [SerializeField] private Button continueInvestigationButton;
 
+    [Header("Scoring")]
+    [Min(0f)] [SerializeField] private float bothCorrectPoints = 2f;
+    [Min(0f)] [SerializeField] private float oneCorrectPoints = 1f;
+    [Min(0f)] [SerializeField] private float neitherCorrectPoints = 0.5f;
+    [Min(0f)] [SerializeField] private float quitPoints = 0f;
+
+    [Header("Score Display")]
+    [SerializeField] private TMP_Text successScoreText;
+    [SerializeField] private TMP_Text incorrectScoreText;
+
     [Header("Correct Answer")]
     [SerializeField] private string correctSuspectID = "olivia";
     [SerializeField] private string correctLocationID = "c07";
@@ -64,6 +75,37 @@ public class DetectiveBoardController : MonoBehaviour
     private bool submissionInProgress;
     private bool submissionLocked;
 
+    public float FinalScore { get; private set; }
+    public bool HasFinalScore { get; private set; }
+
+    // Retained in memory when returning to MainMenu. A new investigation
+    // clears this result in Awake; it is not a server-side score record.
+    public static InvestigationResult LastResult { get; private set; }
+
+    public sealed class InvestigationResult
+    {
+        public float Score { get; }
+        public int AttemptsUsed { get; }
+        public bool WasQuit { get; }
+        public string SuspectID { get; }
+        public string LocationID { get; }
+
+        public InvestigationResult(
+            float score,
+            int attemptsUsed,
+            bool wasQuit,
+            string suspectID,
+            string locationID
+        )
+        {
+            Score = score;
+            AttemptsUsed = attemptsUsed;
+            WasQuit = wasQuit;
+            SuspectID = suspectID;
+            LocationID = locationID;
+        }
+    }
+
     public int AttemptsUsed => attemptsUsed;
     public int AttemptsRemaining =>
         Mathf.Max(0, MaximumAttempts - attemptsUsed);
@@ -85,6 +127,9 @@ public class DetectiveBoardController : MonoBehaviour
         awaitingRetry = false;
         submissionInProgress = false;
         submissionLocked = false;
+        FinalScore = 0f;
+        HasFinalScore = false;
+        LastResult = null;
 
         if (continueInvestigationButton != null)
         {
@@ -313,6 +358,7 @@ public class DetectiveBoardController : MonoBehaviour
         );
 
         UpdateAttemptsDisplay();
+        UpdateScoreDisplay();
 
         if (confirmSubmissionButton != null)
         {
@@ -389,6 +435,87 @@ public class DetectiveBoardController : MonoBehaviour
         attemptsRemainingText.text = IsIndonesian
             ? $"SISA KESEMPATAN: {AttemptsRemaining}/{MaximumAttempts}"
             : $"ATTEMPTS REMAINING: {AttemptsRemaining}/{MaximumAttempts}";
+    }
+
+    private void UpdateScoreDisplay()
+    {
+        string scoreLabel = string.Empty;
+
+        if (HasFinalScore)
+        {
+            string scoreValue = FinalScore.ToString(
+                "0.#######",
+                CultureInfo.InvariantCulture
+            );
+
+            if (IsIndonesian)
+                scoreValue = scoreValue.Replace('.', ',');
+
+            scoreLabel = (IsIndonesian ? "POIN AKHIR: " : "FINAL SCORE: ") +
+                scoreValue;
+        }
+
+        if (successScoreText != null)
+            successScoreText.text = scoreLabel;
+
+        if (incorrectScoreText != null)
+            incorrectScoreText.text = scoreLabel;
+    }
+
+    private float CalculateSubmissionScore(
+        bool suspectCorrect,
+        bool locationCorrect
+    )
+    {
+        if (suspectCorrect && locationCorrect)
+            return bothCorrectPoints;
+
+        if (suspectCorrect || locationCorrect)
+            return oneCorrectPoints;
+
+        return neitherCorrectPoints;
+    }
+
+    private void FinalizeScore(float score, bool wasQuit)
+    {
+        if (HasFinalScore)
+            return;
+
+        FinalScore = score;
+        HasFinalScore = true;
+
+        LastResult = new InvestigationResult(
+            FinalScore,
+            attemptsUsed,
+            wasQuit,
+            wasQuit ? string.Empty : GetSelectedSuspectID(),
+            wasQuit ? string.Empty : GetSelectedLocationID()
+        );
+
+        UpdateScoreDisplay();
+
+        string scoreValue = FinalScore.ToString(
+            "0.#######",
+            CultureInfo.InvariantCulture
+        );
+
+        Debug.Log(
+            "INVESTIGATION FINISHED | Outcome: " +
+            (wasQuit ? "Quit" : "Submitted") +
+            " | Score: " + scoreValue +
+            $" | Attempts: {attemptsUsed}/{MaximumAttempts}",
+            this
+        );
+    }
+
+    public bool RecordQuit()
+    {
+        if (submissionLocked || submissionInProgress || HasFinalScore)
+            return false;
+
+        submissionLocked = true;
+        FinalizeScore(quitPoints, true);
+        return true;
     }
 
     public void OpenBoard()
@@ -487,6 +614,16 @@ public class DetectiveBoardController : MonoBehaviour
             return;
         }
 
+        if (successScoreText == null || incorrectScoreText == null)
+        {
+            Debug.LogError(
+                "DetectiveBoardController: Success Score Text dan " +
+                "Incorrect Score Text harus dihubungkan.",
+                this
+            );
+            return;
+        }
+
         submissionInProgress = true;
         RefreshSelection();
 
@@ -511,6 +648,16 @@ public class DetectiveBoardController : MonoBehaviour
         bool answerCorrect = suspectCorrect && locationCorrect;
 
         attemptsUsed++;
+
+        // The first incorrect submission only consumes an attempt.
+        // Final points use the last confirmed pair, never a running total.
+        if (answerCorrect || AttemptsRemaining == 0)
+        {
+            FinalizeScore(
+                CalculateSubmissionScore(suspectCorrect, locationCorrect),
+                false
+            );
+        }
 
         Debug.Log(
             $"SUBMISSION {attemptsUsed}/{MaximumAttempts}: " +
