@@ -828,10 +828,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fced0ba2eb752e4a9c956988bb4e7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
-  englishText: Returning to the Main Menu will end this investigation. Evidence progress
-    and selected answers will reset.
-  indonesianText: Kembali ke Menu Utama akan mengakhiri investigasi ini. Progres
-    bukti dan pilihan jawaban akan direset.
+  englishText: Quitting will end this investigation and exit the game. You will receive
+    0 points.
+  indonesianText: Keluar akan mengakhiri investigasi ini dan menutup permainan. Kamu
+    akan mendapatkan 0 poin.
 --- !u!114 &40000000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,8 +852,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Returning to the Main Menu will end this investigation. Evidence progress
-    and selected answers will reset.
+  m_text: Quitting will end this investigation and exit the game. You will receive
+    0 points.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17066,7 +17066,7 @@ MonoBehaviour:
   continueInvestigationButton: {fileID: 1482233649}
   bothCorrectPoints: 2
   oneCorrectPoints: 1
-  neitherCorrectPoints: 0.5
+  neitherCorrectPoints: 0
   quitPoints: 0
   successScoreText: {fileID: 2091348535}
   incorrectScoreText: {fileID: 777696941}
@@ -17147,7 +17147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuitInvestigationController
   quitConfirmationPanel: {fileID: 570999659}
   hamburgerDropdown: {fileID: 523904161}
-  mainMenuSceneName: MainMenu
 --- !u!1 &874242401
 GameObject:
   m_ObjectHideFlags: 0

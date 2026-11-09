@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class QuitInvestigationController : MonoBehaviour
 {
@@ -9,16 +8,13 @@ public class QuitInvestigationController : MonoBehaviour
     [Header("Menu")]
     [SerializeField] private GameObject hamburgerDropdown;
 
-    [Header("Scene")]
-    [SerializeField] private string mainMenuSceneName = "MainMenu";
-
-    private bool isReturningToMenu;
+    private bool isQuitting;
     private DetectiveBoardController detectiveBoardController;
 
     private void Awake()
     {
-        // Both controllers are on GameSystems in the Investigation scene.
-        detectiveBoardController = GetComponent<DetectiveBoardController>();
+        detectiveBoardController =
+            GetComponent<DetectiveBoardController>();
 
         if (quitConfirmationPanel != null)
         {
@@ -28,7 +24,7 @@ public class QuitInvestigationController : MonoBehaviour
 
     public void OpenQuitConfirmation()
     {
-        if (isReturningToMenu)
+        if (isQuitting)
             return;
 
         if (quitConfirmationPanel == null)
@@ -51,7 +47,7 @@ public class QuitInvestigationController : MonoBehaviour
 
     public void CancelQuit()
     {
-        if (isReturningToMenu)
+        if (isQuitting)
             return;
 
         if (quitConfirmationPanel != null)
@@ -62,7 +58,7 @@ public class QuitInvestigationController : MonoBehaviour
 
     public void ConfirmQuit()
     {
-        if (isReturningToMenu ||
+        if (isQuitting ||
             quitConfirmationPanel == null ||
             !quitConfirmationPanel.activeSelf)
         {
@@ -82,7 +78,12 @@ public class QuitInvestigationController : MonoBehaviour
         if (!detectiveBoardController.RecordQuit())
             return;
 
-        isReturningToMenu = true;
-        SceneManager.LoadScene(mainMenuSceneName);
+        isQuitting = true;
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
