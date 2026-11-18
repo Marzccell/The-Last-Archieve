@@ -36,14 +36,15 @@ public class DetectiveBoardController : MonoBehaviour
     [SerializeField] private Button continueInvestigationButton;
 
     [Header("Scoring")]
-    [Min(0f)] [SerializeField] private float bothCorrectPoints = 2f;
-    [Min(0f)] [SerializeField] private float oneCorrectPoints = 1f;
-    [Min(0f)] [SerializeField] private float neitherCorrectPoints = 0.5f;
-    [Min(0f)] [SerializeField] private float quitPoints = 0f;
+    [Min(0)] [SerializeField] private int bothCorrectPoints = 5000;
+    [Min(0)] [SerializeField] private int oneCorrectPoints = 1;
+    [Min(0)] [SerializeField] private int neitherCorrectPoints = 0;
+    [Min(0)] [SerializeField] private int quitPoints = 0;
 
     [Header("Score Display")]
     [SerializeField] private TMP_Text successScoreText;
     [SerializeField] private TMP_Text incorrectScoreText;
+    [SerializeField] private TMP_Text quitScoreText;
 
     [Header("Correct Answer")]
     [SerializeField] private string correctSuspectID = "olivia";
@@ -75,7 +76,7 @@ public class DetectiveBoardController : MonoBehaviour
     private bool submissionInProgress;
     private bool submissionLocked;
 
-    public float FinalScore { get; private set; }
+    public int FinalScore { get; private set; }
     public bool HasFinalScore { get; private set; }
 
     // Retained in memory when returning to MainMenu. A new investigation
@@ -84,14 +85,14 @@ public class DetectiveBoardController : MonoBehaviour
 
     public sealed class InvestigationResult
     {
-        public float Score { get; }
+        public int Score { get; }
         public int AttemptsUsed { get; }
         public bool WasQuit { get; }
         public string SuspectID { get; }
         public string LocationID { get; }
 
         public InvestigationResult(
-            float score,
+            int score,
             int attemptsUsed,
             bool wasQuit,
             string suspectID,
@@ -127,7 +128,7 @@ public class DetectiveBoardController : MonoBehaviour
         awaitingRetry = false;
         submissionInProgress = false;
         submissionLocked = false;
-        FinalScore = 0f;
+        FinalScore = 0;
         HasFinalScore = false;
         LastResult = null;
 
@@ -443,13 +444,7 @@ public class DetectiveBoardController : MonoBehaviour
 
         if (HasFinalScore)
         {
-            string scoreValue = FinalScore.ToString(
-                "0.#######",
-                CultureInfo.InvariantCulture
-            );
-
-            if (IsIndonesian)
-                scoreValue = scoreValue.Replace('.', ',');
+            string scoreValue = FinalScore.ToString(CultureInfo.InvariantCulture);
 
             scoreLabel = (IsIndonesian ? "POIN AKHIR: " : "FINAL SCORE: ") +
                 scoreValue;
@@ -460,9 +455,12 @@ public class DetectiveBoardController : MonoBehaviour
 
         if (incorrectScoreText != null)
             incorrectScoreText.text = scoreLabel;
+
+        if (quitScoreText != null)
+            quitScoreText.text = scoreLabel;
     }
 
-    private float CalculateSubmissionScore(
+    private int CalculateSubmissionScore(
         bool suspectCorrect,
         bool locationCorrect
     )
@@ -476,7 +474,7 @@ public class DetectiveBoardController : MonoBehaviour
         return neitherCorrectPoints;
     }
 
-    private void FinalizeScore(float score, bool wasQuit)
+    private void FinalizeScore(int score, bool wasQuit, bool answerCorrect)
     {
         if (HasFinalScore)
             return;
@@ -494,10 +492,7 @@ public class DetectiveBoardController : MonoBehaviour
 
         UpdateScoreDisplay();
 
-        string scoreValue = FinalScore.ToString(
-            "0.#######",
-            CultureInfo.InvariantCulture
-        );
+        string scoreValue = FinalScore.ToString(CultureInfo.InvariantCulture);
 
         Debug.Log(
             "INVESTIGATION FINISHED | Outcome: " +
@@ -506,6 +501,10 @@ public class DetectiveBoardController : MonoBehaviour
             $" | Attempts: {attemptsUsed}/{MaximumAttempts}",
             this
         );
+
+        // The host needs the score before the status that ends the session.
+        WebBridge.SendScore(FinalScore);
+        WebBridge.SendStatus(wasQuit || answerCorrect ? "win" : "lose");
     }
 
     public bool RecordQuit()
@@ -514,7 +513,7 @@ public class DetectiveBoardController : MonoBehaviour
             return false;
 
         submissionLocked = true;
-        FinalizeScore(quitPoints, true);
+        FinalizeScore(quitPoints, wasQuit: true, answerCorrect: false);
         return true;
     }
 
@@ -655,7 +654,8 @@ public class DetectiveBoardController : MonoBehaviour
         {
             FinalizeScore(
                 CalculateSubmissionScore(suspectCorrect, locationCorrect),
-                false
+                wasQuit: false,
+                answerCorrect: answerCorrect
             );
         }
 

@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class QuitInvestigationController : MonoBehaviour
 {
     [Header("Popup")]
     [SerializeField] private GameObject quitConfirmationPanel;
+    [SerializeField] private GameObject quitResultPanel;
 
     [Header("Menu")]
     [SerializeField] private GameObject hamburgerDropdown;
@@ -24,7 +26,7 @@ public class QuitInvestigationController : MonoBehaviour
 
     public void OpenQuitConfirmation()
     {
-        if (isQuitting)
+        if (isQuitting || (detectiveBoardController != null && detectiveBoardController.HasFinalScore))
             return;
 
         if (quitConfirmationPanel == null)
@@ -75,15 +77,21 @@ public class QuitInvestigationController : MonoBehaviour
             return;
         }
 
+        if (quitResultPanel == null)
+        {
+            Debug.LogError("Quit Result Panel belum dihubungkan.", this);
+            return;
+        }
+
         if (!detectiveBoardController.RecordQuit())
             return;
 
         isQuitting = true;
+        quitConfirmationPanel.SetActive(false);
+        quitResultPanel.transform.SetAsLastSibling();
+        quitResultPanel.SetActive(true);
 
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        if (EventSystem.current != null)
+            EventSystem.current.SetSelectedGameObject(null);
     }
 }
