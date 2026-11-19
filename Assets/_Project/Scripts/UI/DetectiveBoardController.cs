@@ -2,7 +2,6 @@ using System;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DetectiveBoardController : MonoBehaviour
@@ -58,11 +57,6 @@ public class DetectiveBoardController : MonoBehaviour
     [SerializeField] private TMP_Text submittedSuspectText;
     [SerializeField] private TMP_Text submittedLocationText;
 
-    [Header("Result Buttons")]
-    [SerializeField] private Button successReturnToMenuButton;
-    [SerializeField] private Button incorrectReturnToMenuButton;
-    [SerializeField] private string mainMenuSceneName = "MainMenu";
-
     [Header("Buttons")]
     [SerializeField] private Button closeBoardButton;
 
@@ -79,8 +73,7 @@ public class DetectiveBoardController : MonoBehaviour
     public int FinalScore { get; private set; }
     public bool HasFinalScore { get; private set; }
 
-    // Retained in memory when returning to MainMenu. A new investigation
-    // clears this result in Awake; it is not a server-side score record.
+    // Retained in memory until the next investigation starts.
     public static InvestigationResult LastResult { get; private set; }
 
     public sealed class InvestigationResult
@@ -175,20 +168,6 @@ public class DetectiveBoardController : MonoBehaviour
             );
         }
 
-        if (successReturnToMenuButton != null)
-        {
-            successReturnToMenuButton.onClick.AddListener(
-                ReturnToMainMenu
-            );
-        }
-
-        if (incorrectReturnToMenuButton != null)
-        {
-            incorrectReturnToMenuButton.onClick.AddListener(
-                ReturnToMainMenu
-            );
-        }
-
         if (submissionConfirmationPanel != null)
             submissionConfirmationPanel.SetActive(false);
 
@@ -244,20 +223,6 @@ public class DetectiveBoardController : MonoBehaviour
         {
             confirmSubmissionButton.onClick.RemoveListener(
                 ConfirmSubmission
-            );
-        }
-
-        if (successReturnToMenuButton != null)
-        {
-            successReturnToMenuButton.onClick.RemoveListener(
-                ReturnToMainMenu
-            );
-        }
-
-        if (incorrectReturnToMenuButton != null)
-        {
-            incorrectReturnToMenuButton.onClick.RemoveListener(
-                ReturnToMainMenu
             );
         }
     }
@@ -474,7 +439,7 @@ public class DetectiveBoardController : MonoBehaviour
         return neitherCorrectPoints;
     }
 
-    private void FinalizeScore(int score, bool wasQuit, bool answerCorrect)
+    private void FinalizeScore(int score, bool wasQuit)
     {
         if (HasFinalScore)
             return;
@@ -504,7 +469,7 @@ public class DetectiveBoardController : MonoBehaviour
 
         // The host needs the score before the status that ends the session.
         WebBridge.SendScore(FinalScore);
-        WebBridge.SendStatus(wasQuit || answerCorrect ? "win" : "lose");
+        WebBridge.SendStatus("win");
     }
 
     public bool RecordQuit()
@@ -513,7 +478,7 @@ public class DetectiveBoardController : MonoBehaviour
             return false;
 
         submissionLocked = true;
-        FinalizeScore(quitPoints, wasQuit: true, answerCorrect: false);
+        FinalizeScore(quitPoints, wasQuit: true);
         return true;
     }
 
@@ -654,8 +619,7 @@ public class DetectiveBoardController : MonoBehaviour
         {
             FinalizeScore(
                 CalculateSubmissionScore(suspectCorrect, locationCorrect),
-                wasQuit: false,
-                answerCorrect: answerCorrect
+                wasQuit: false
             );
         }
 
@@ -774,11 +738,6 @@ public class DetectiveBoardController : MonoBehaviour
                 selectedLocation.DisplayName
                     .ToUpperInvariant();
         }
-    }
-
-    private void ReturnToMainMenu()
-    {
-        SceneManager.LoadScene(mainMenuSceneName);
     }
 
     public string GetSelectedSuspectID()
