@@ -409,10 +409,13 @@ public class DetectiveBoardController : MonoBehaviour
 
         if (HasFinalScore)
         {
-            string scoreValue = FinalScore.ToString(CultureInfo.InvariantCulture);
+            bool isIndonesian = IsIndonesian;
+            string scoreValue = FinalScore.ToString("N0", CultureInfo.InvariantCulture);
+            if (isIndonesian)
+                scoreValue = scoreValue.Replace(',', '.');
 
-            scoreLabel = (IsIndonesian ? "POIN AKHIR: " : "FINAL SCORE: ") +
-                scoreValue;
+            scoreLabel = (isIndonesian ? "POIN AKHIR" : "FINAL SCORE") +
+                "\n<color=#F4D184><size=56>" + scoreValue + "</size></color>";
         }
 
         if (successScoreText != null)
